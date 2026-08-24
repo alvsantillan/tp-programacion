@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto — tienda-claudia</title>
+<style>
+  :root{
+    --bg: #0c0e13;
+    --panel: #14171f;
+    --panel-2: #1a1e29;
+    --border: #262b38;
+    --text: #e9eaf0;
+    --muted: #8b92a5;
+    --accent: #e0a458;
+    --accent-soft: rgba(224,164,88,0.14);
+    --danger: #e0575f;
+    --danger-soft: rgba(224,87,95,0.14);
+    --ok: #6bbf8f;
+    --ok-soft: rgba(107,191,143,0.14);
+    --warn: #e0c458;
+    --warn-soft: rgba(224,196,88,0.14);
+    --font-display: 'Sora', 'Segoe UI', sans-serif;
+    --font-body: 'Inter', 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- nav ---------- */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--panel) 0%, var(--bg) 100%);
+  }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .brand-mark{
+    width:34px; height:34px;
+    border-radius:8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-mono);
+    font-weight:700;
+    font-size:14px;
+  }
+  .brand h1{ font-family: var(--font-display); font-size: 18px; margin:0; letter-spacing: -0.01em; }
+  nav.links{ display:flex; gap: 22px; font-size: 13.5px; }
+  nav.links a{ text-decoration:none; color: var(--muted); }
+  nav.links a:hover{ color: var(--accent); }
+
+  main{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  .breadcrumb{
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+  .breadcrumb a{ text-decoration:none; color: var(--muted); }
+  .breadcrumb a:hover{ color: var(--accent); }
+  .breadcrumb .actual{ color: var(--text); }
+
+  .product-layout{
+    display:grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery-main{
+    aspect-ratio: 4/5;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    margin-bottom: 12px;
+  }
+  .gallery-main img{ width:100%; height:100%; object-fit: cover; }
+  .gallery-main .placeholder{
+    font-size: 64px;
+    color: var(--border);
+  }
+  .gallery-thumbs{
+    display:flex;
+    gap: 10px;
+  }
+  .thumb-slot{
+    width: 64px; height: 64px;
+    border-radius: 8px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--muted);
+    font-size: 20px;
+  }
+
+  /* ---------- info ---------- */
+  .prod-cat-tag{
+    display:inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .prod-title{
+    font-family: var(--font-display);
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    line-height: 1.15;
+  }
+  .prod-price{
+    font-family: var(--font-display);
+    font-size: 26px;
+    color: var(--accent);
+    margin: 0 0 18px 0;
+  }
+
+  .stock-line{
+    display:flex;
+    align-items:center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
+  .stock-line .dot{ width:8px; height:8px; border-radius:50%; }
+  .stock-line.disponible .dot{ background: var(--ok); }
+  .stock-line.disponible{ color: var(--ok); }
+  .stock-line.bajo .dot{ background: var(--warn); }
+  .stock-line.bajo{ color: var(--warn); }
+  .stock-line.agotado .dot{ background: var(--danger); }
+  .stock-line.agotado{ color: var(--danger); }
+
+  .section-label{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .talles-picker{
+    display:flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  .talle-opt{
+    position: relative;
+  }
+  .talle-opt input{
+    position:absolute; opacity:0; width:100%; height:100%; cursor:pointer; margin:0;
+  }
+  .talle-opt span{
+    display:flex; align-items:center; justify-content:center;
+    width: 46px; height: 42px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel-2);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight:600;
+    transition: all 0.12s ease;
+  }
+  .talle-opt input:checked + span{
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .talle-opt input:focus-visible + span{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .qty-row{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .qty-control{
+    display:flex;
+    align-items:center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow:hidden;
+  }
+  .qty-control button{
+    width: 36px; height: 38px;
+    background: var(--panel-2);
+    border: none;
+    color: var(--text);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .qty-control button:hover{ background: var(--accent-soft); color: var(--accent); }
+  .qty-control input{
+    width: 44px;
+    text-align:center;
+    border: none;
+    background: var(--panel);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    height: 38px;
+  }
+
+  .btn{
+    font-family: var(--font-body);
+    font-size: 14px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    padding: 13px 20px;
+    cursor: pointer;
+  }
+  .btn-primary{
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #17130a;
+    font-weight: 700;
+    width: 100%;
+  }
+  .btn-primary:hover{ filter: brightness(1.08); }
+  .btn-primary:disabled{
+    background: var(--panel-2);
+    border-color: var(--border);
+    color: var(--muted);
+    cursor: not-allowed;
+    filter: none;
+  }
+
+  .prod-desc{
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px dashed var(--border);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .prod-desc p{ margin: 0; }
+
+  .toast{
+    position: fixed;
+    bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: transform 0.25s ease;
+    z-index: 60;
+  }
+  .toast.show{ transform: translateX(-50%) translateY(0); }
+
+  .empty-state{
+    text-align:center;
+    padding: 80px 20px;
+    color: var(--muted);
+  }
+  .empty-state .mark{ font-family: var(--font-mono); font-size: 32px; color: var(--accent); margin-bottom: 12px; }
+
+  @media (max-width: 760px){
+    .product-layout{ grid-template-columns: 1fr; }
+    main{ padding: 20px; }
+    .topbar{ padding: 16px 20px; }
+    nav.links{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){ .toast{ transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="brand">
+    <div class="brand-mark">C</div>
+    <h1>tienda-claudia</h1>
+  </a>
+  <nav class="links">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</div>
+
+<main>
+  <div id="contenido"></div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const STORAGE_KEY = 'tienda-claudia-productos';
+  const UMBRAL_BAJO = 5;
+
+  const seed = [
+    { id: 'p1', nombre: 'Remera Oversize Básica', categoria: 'Remeras', talles: ['S','M','L','XL'], precio: 18900, stock: 24, descripcion: 'Remera de algodón peinado 24/1, corte oversize y cuello redondo reforzado. Ideal para usar suelta o combinada con jogging.', imagenUrl: '' },
+    { id: 'p2', nombre: 'Buzo Canguro Frisado', categoria: 'Buzos', talles: ['M','L','XL'], precio: 32500, stock: 3, descripcion: 'Buzo frisado con bolsillo canguro y capucha forrada. Puño y cintura en rib para mayor abrigo.', imagenUrl: '' },
+    { id: 'p3', nombre: 'Jean Recto Tiro Alto', categoria: 'Pantalones', talles: ['S','M','L'], precio: 41200, stock: 0, descripcion: 'Jean de tiro alto, calce recto, en denim rígido de alta durabilidad. Cinco bolsillos clásicos.', imagenUrl: '' },
+    { id: 'p4', nombre: 'Campera Rompeviento', categoria: 'Camperas', talles: ['M','L','XL'], precio: 55800, stock: 12, descripcion: 'Campera liviana e impermeable, con capucha plegable y bolsillos con cierre. Ideal para entretiempo.', imagenUrl: '' },
+    { id: 'p5', nombre: 'Remera Estampada Vintage', categoria: 'Remeras', talles: ['XS','S','M'], precio: 21300, stock: 4, descripcion: 'Remera de algodón con estampa vintage lavada. Corte regular y cuello redondo.', imagenUrl: '' }
+  ];
+
+  function cargarProductos(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw){
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(seed));
+        return seed.slice();
+      }
+      return JSON.parse(raw);
+    }catch(e){
+      return seed.slice();
+    }
+  }
+
+  function estadoStock(stock){
+    if(stock <= 0) return 'agotado';
+    if(stock <= UMBRAL_BAJO) return 'bajo';
+    return 'disponible';
+  }
+
+  function etiquetaStock(estado, stock){
+    if(estado === 'agotado') return 'Sin stock por el momento';
+    if(estado === 'bajo') return `¡Últimas unidades! Quedan ${stock}`;
+    return 'En stock';
+  }
+
+  function formatoMoneda(n){
+    return '$' + Number(n).toLocaleString('es-AR');
+  }
+
+  function escapeHtml(str){
+    const div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+
+  function mostrarToast(msg){
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const idParam = params.get('id');
+  const productos = cargarProductos();
+  const producto = idParam ? productos.find(p => p.id === idParam) : productos[0];
+
+  const contenido = document.getElementById('contenido');
+
+  if(!producto){
+    contenido.innerHTML = `
+      <div class="empty-state">
+        <div class="mark">···</div>
+        <p>No encontramos ese producto.</p>
+        <a href="catalogo.html" class="btn btn-primary" style="width:auto; display:inline-block; margin-top:14px;">Ver catálogo completo</a>
+      </div>
+    `;
+    return;
+  }
+
+  const estado = estadoStock(producto.stock);
+  const agotado = estado === 'agotado';
+
+  contenido.innerHTML = `
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / <span class="actual">${escapeHtml(producto.nombre)}</span>
+    </div>
+
+    <div class="product-layout">
+      <div class="gallery-col">
+        <div class="gallery-main">
+          ${producto.imagenUrl
+            ? `<img src="${escapeHtml(producto.imagenUrl)}" alt="${escapeHtml(producto.nombre)}">`
+            : `<span class="placeholder">👕</span>`}
+        </div>
+        <div class="gallery-thumbs">
+          <div class="thumb-slot">👕</div>
+          <div class="thumb-slot">👕</div>
+          <div class="thumb-slot">👕</div>
+        </div>
+      </div>
+
+      <div class="info-col">
+        <span class="prod-cat-tag">${escapeHtml(producto.categoria)}</span>
+        <h2 class="prod-title">${escapeHtml(producto.nombre)}</h2>
+        <div class="prod-price">${formatoMoneda(producto.precio)}</div>
+
+        <div class="stock-line ${estado}">
+          <span class="dot"></span>
+          <span>${etiquetaStock(estado, producto.stock)}</span>
+        </div>
+
+        <div class="section-label">Talle</div>
+        <div class="talles-picker" id="tallesPicker">
+          ${(producto.talles || []).map((t, i) => `
+            <label class="talle-opt">
+              <input type="radio" name="talle" value="${escapeHtml(t)}" ${i === 0 ? 'checked' : ''} ${agotado ? 'disabled' : ''}>
+              <span>${escapeHtml(t)}</span>
+            </label>
+          `).join('')}
+        </div>
+
+        <div class="section-label">Cantidad</div>
+        <div class="qty-row">
+          <div class="qty-control">
+            <button type="button" id="qtyMenos" ${agotado ? 'disabled' : ''}>−</button>
+            <input type="text" id="qtyValor" value="1" readonly>
+            <button type="button" id="qtyMas" ${agotado ? 'disabled' : ''}>+</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btnAgregar" ${agotado ? 'disabled' : ''}>
+          ${agotado ? 'Sin stock' : 'Agregar al carrito'}
+        </button>
+
+        <div class="prod-desc">
+          <p>${escapeHtml(producto.descripcion) || 'Sin descripción disponible.'}</p>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const qtyValor = document.getElementById('qtyValor');
+  const maxQty = Math.max(1, producto.stock);
+
+  const btnMenos = document.getElementById('qtyMenos');
+  const btnMas = document.getElementById('qtyMas');
+  if(btnMenos){
+    btnMenos.addEventListener('click', () => {
+      const actual = Number(qtyValor.value);
+      if(actual > 1) qtyValor.value = actual - 1;
+    });
+  }
+  if(btnMas){
+    btnMas.addEventListener('click', () => {
+      const actual = Number(qtyValor.value);
+      if(actual < maxQty) qtyValor.value = actual + 1;
+    });
+  }
+
+  const btnAgregar = document.getElementById('btnAgregar');
+  if(btnAgregar){
+    btnAgregar.addEventListener('click', () => {
+      const talleSeleccionado = document.querySelector('input[name="talle"]:checked');
+      if(!talleSeleccionado){
+        mostrarToast('Elegí un talle primero');
+        return;
+      }
+      mostrarToast(`Agregado: ${producto.nombre} (talle ${talleSeleccionado.value}) x${qtyValor.value}`);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
