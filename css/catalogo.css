@@ -1,0 +1,388 @@
+
+:root {
+    --rosa: #c58b8b;
+    --rosa-claro: #f6eeee;
+    --beige: #f8f4ef;
+    --bordo: #6f3f46;
+    --marron: #4a3b3b;
+    --blanco: #ffffff;
+    --gris: #777777;
+    --borde: #e5dada;
+
+    --fuente-principal: Arial, sans-serif;
+
+    --espacio-xs: 8px;
+    --espacio-sm: 16px;
+    --espacio-md: 24px;
+    --espacio-lg: 40px;
+
+    --radio: 10px;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--marron);
+    background-color: var(--blanco);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 6%;
+
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+
+.logo img {
+    width: 100px;
+    display: block;
+    border-radius: 50px;
+}
+
+
+
+
+.nav-principal ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-principal a {
+    color: var(--marron);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-principal a:hover {
+    color: var(--rosa);
+}
+
+
+
+
+main {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 40px 5%;
+}
+
+main > h2 {
+    text-align: center;
+
+    color: var(--bordo);
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+main > p {
+    text-align: center;
+
+    color: var(--gris);
+
+    margin-bottom: 40px;
+}
+
+
+
+
+#categorias {
+    margin-bottom: 40px;
+}
+
+details {
+    border: 1px solid var(--borde);
+
+    border-radius: var(--radio);
+
+    background-color: var(--blanco);
+
+    overflow: hidden;
+}
+
+summary {
+    padding: 16px 20px;
+
+    cursor: pointer;
+
+    background-color: var(--rosa-claro);
+
+    color: var(--bordo);
+
+    transition: 0.3s;
+}
+
+summary:hover {
+    background-color: #f1e1e1;
+}
+
+details ul {
+    padding: 15px 20px;
+}
+
+details li {
+    margin: 8px 0;
+}
+
+details li a {
+    display: block;
+
+    padding: 8px 12px;
+
+    color: var(--marron);
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+details li a:hover {
+    background-color: var(--rosa-claro);
+
+    color: var(--bordo);
+}
+
+
+
+
+#catalogo {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+
+
+
+#catalogo > h2 {
+    grid-column: 1 / 4;
+
+    text-align: center;
+
+    color: var(--bordo);
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+
+
+#catalogo > br {
+    display: none;
+}
+
+
+
+
+#catalogo > article {
+    background-color: var(--blanco);
+
+    border: 2px solid var(--borde);
+
+    border-radius: var(--radio);
+
+    padding: 25px;
+
+    width: 100%;
+
+    min-height: 250px;
+
+    transition: 0.3s;
+}
+
+
+
+
+#catalogo > article:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--rosa);
+
+    box-shadow: 0 8px 20px rgba(111, 63, 70, 0.12);
+}
+
+
+
+
+#catalogo > article h3 {
+    color: var(--marron);
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+
+
+#catalogo > article p {
+    color: var(--gris);
+
+    margin-bottom: 12px;
+}
+
+
+
+
+#catalogo > article strong {
+    color: var(--bordo);
+
+    font-size: 18px;
+}
+
+
+
+
+#catalogo > article button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: var(--bordo);
+
+    color: var(--blanco);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#catalogo > article button:hover {
+    background-color: var(--rosa);
+}
+
+
+
+
+.footer {
+    background-color: var(--marron);
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.footer-redes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 15px;
+}
+
+.footer-redes a {
+    transition: 0.3s;
+}
+
+.footer-redes a:hover {
+    color: var(--rosa);
+}
+
+.footer-copy {
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    #catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .nav-principal ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    #catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    #catalogo > article {
+        padding: 20px;
+    }
+
+    .footer-redes {
+        gap: 20px;
+    }
+
+}
+
+
