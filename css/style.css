@@ -527,3 +527,130 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* DETALLE DE PRODUCTO
+   NOTA: .talles, .boton-consultar y .precio
+   ya existen más arriba en este archivo.
+   Acá solo se agrego lo que falta. */
+
+.breadcrumb {
+    color: var(--gris);
+    font-size: 13px;
+    margin-bottom: var(--espacio-md);
+}
+
+.breadcrumb a {
+    color: var(--gris);
+}
+
+.breadcrumb a:hover {
+    color: var(--rosa);
+}
+
+
+/* ---- Layout principal: Grid ----
+   Dos columnas en escritorio: galería | info */
+.detalle-producto {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--espacio-lg);
+}
+
+.galeria-principal img {
+    width: 100%;
+    border-radius: var(--radio);
+}
+
+
+/* ---- Miniaturas: Flexbox ---- */
+.galeria-miniaturas {
+    display: flex;
+    gap: var(--espacio-xs);
+    margin-top: var(--espacio-sm);
+}
+
+.galeria-miniaturas img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+
+.info-producto h1 {
+    color: var(--bordo);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.stock-disponible {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: var(--espacio-sm);
+}
+
+.selector-talles {
+    border: none;
+    margin: var(--espacio-sm) 0;
+}
+
+.selector-talles legend {
+    color: var(--bordo);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* ---- Cantidad: Flexbox ---- */
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-xs);
+    margin-bottom: var(--espacio-md);
+}
+
+.selector-cantidad input {
+    width: 60px;
+    padding: 6px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+}
+
+
+.descripcion-producto {
+    margin-top: var(--espacio-lg);
+    color: var(--marron);
+}
+
+.descripcion-producto h2 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLET (mismo corte que el resto del sitio)
+======================================== */
+@media (max-width: 900px) {
+
+    .detalle-producto {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - CELULAR
+======================================== */
+@media (max-width: 600px) {
+
+    .info-producto h1 {
+        font-size: 24px;
+    }
+
+    .galeria-miniaturas img {
+        width: 55px;
+        height: 55px;
+    }
+}
