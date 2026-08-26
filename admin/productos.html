@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | Admin Claudette</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="body-admin">
+
+  <div class="layout-admin">
+
+    <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
+    <aside class="menu-admin">
+      <a class="logo-admin" href="productos.html">
+        <img src="../img/ui/logo.jpeg" alt="Claudette">
+      </a>
+
+      <nav class="nav-admin">
+        <ul>
+          <li><a class="activo" href="productos.html">Productos</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="../index.html">Ver el sitio</a></li>
+          <li><a href="login.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido-admin">
+
+      <header class="encabezado-admin">
+        <h1>Productos</h1>
+        <a class="boton-admin" href="producto-form.html">Nuevo producto</a>
+      </header>
+
+      <!-- Filtros -->
+      <form class="filtros-admin" action="#" method="get">
+
+        <div class="campo-admin">
+          <label for="buscar">Buscar</label>
+          <input type="search" id="buscar" name="buscar" placeholder="Nombre del producto">
+        </div>
+
+        <div class="campo-admin">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">Todas</option>
+            <option value="remeras">Remeras</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="vestidos">Vestidos</option>
+            <option value="abrigos">Abrigos</option>
+            <option value="calzado">Calzado</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
+
+        <div class="campo-admin">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="">Todos</option>
+            <option value="activo">Activo</option>
+            <option value="pausado">Pausado</option>
+          </select>
+        </div>
+
+        <button class="boton-admin" type="submit">Filtrar</button>
+
+      </form>
+
+      <!-- Tabla -->
+      <div class="tabla-scroll">
+        <table class="tabla-admin">
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>1</td>
+              <td>Vestido floreado</td>
+              <td>Vestidos</td>
+              <td class="col-numero">$45.000</td>
+              <td class="col-numero">8</td>
+              <td><span class="etiqueta etiqueta-activo">Activo</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=1">Editar</a>
+                  <a class="link-accion link-baja" href="#">Pausar</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Campera de jean</td>
+              <td>Abrigos</td>
+              <td class="col-numero">$62.000</td>
+              <td class="col-numero stock-bajo">3</td>
+              <td><span class="etiqueta etiqueta-activo">Activo</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=2">Editar</a>
+                  <a class="link-accion link-baja" href="#">Pausar</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Collar plateado</td>
+              <td>Accesorios</td>
+              <td class="col-numero">$12.000</td>
+              <td class="col-numero">15</td>
+              <td><span class="etiqueta etiqueta-activo">Activo</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=3">Editar</a>
+                  <a class="link-accion link-baja" href="#">Pausar</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>Pantalón de lino</td>
+              <td>Pantalones</td>
+              <td class="col-numero">$38.000</td>
+              <td class="col-numero">6</td>
+              <td><span class="etiqueta etiqueta-activo">Activo</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=4">Editar</a>
+                  <a class="link-accion link-baja" href="#">Pausar</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td>Blusa Elegance</td>
+              <td>Remeras</td>
+              <td class="col-numero">$32.500</td>
+              <td class="col-numero stock-bajo">0</td>
+              <td><span class="etiqueta etiqueta-pausado">Pausado</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=5">Editar</a>
+                  <a class="link-accion" href="#">Activar</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>6</td>
+              <td>Botas de cuero</td>
+              <td>Calzado</td>
+              <td class="col-numero">$85.000</td>
+              <td class="col-numero">4</td>
+              <td><span class="etiqueta etiqueta-activo">Activo</span></td>
+              <td>
+                <div class="acciones">
+                  <a class="link-accion" href="producto-form.html?id=6">Editar</a>
+                  <a class="link-accion link-baja" href="#">Pausar</a>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+
+      <p class="pie-tabla">Mostrando 6 productos</p>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

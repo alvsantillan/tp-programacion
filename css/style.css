@@ -527,3 +527,16 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+.link-admin {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.link-admin:hover {
+    opacity: 1;
+    color: var(--rosa);
+}
