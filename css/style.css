@@ -528,7 +528,6 @@ h2 {
     }
 }
 
-
 /* DETALLE DE PRODUCTO
    NOTA: .talles, .boton-consultar y .precio
    ya existen más arriba en este archivo.
@@ -653,4 +652,17 @@ h2 {
         width: 55px;
         height: 55px;
     }
+}
+
+.link-admin {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.link-admin:hover {
+    opacity: 1;
+    color: var(--rosa);
 }

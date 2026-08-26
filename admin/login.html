@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar | Admin Claudette</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="body-admin">
+
+  <main class="pantalla-login">
+
+    <div class="tarjeta-login">
+
+      <a class="logo-login" href="../index.html">
+        <img src="../img/ui/logo.jpeg" alt="Claudette">
+      </a>
+
+      <h1>Panel de administración</h1>
+      <p class="ayuda">Ingresá con tu usuario para gestionar la tienda.</p>
+
+      <form class="form-login" action="productos.html" method="get">
+
+        <div class="campo-admin">
+          <label for="usuario">Usuario o email</label>
+          <input type="text" id="usuario" name="usuario" placeholder="claudia" required>
+        </div>
+
+        <div class="campo-admin">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" name="clave" placeholder="Tu contraseña" required>
+        </div>
+
+        <label class="check-simple">
+          <input type="checkbox" name="recordar" value="si">
+          Mantener la sesión iniciada
+        </label>
+
+        <button class="boton-admin" type="submit">Ingresar</button>
+
+      </form>
+
+      <a class="link-volver" href="../index.html">Volver al sitio</a>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
