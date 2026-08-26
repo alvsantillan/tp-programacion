@@ -1,6 +1,4 @@
-/* ========================================
-   VARIABLES
-======================================== */
+/*  -VARIABLES-  */
 :root {
     --rosa: #c58b8b;
     --rosa-claro: #f6eeee;
@@ -22,9 +20,9 @@
 }
 
 
-/* ========================================
+/* 
    RESET
-======================================== */
+ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -54,9 +52,9 @@ ul {
 }
 
 
-/* ========================================
+/* 
    HEADER
-======================================== */
+ */
 .header {
     display: flex;
     justify-content: space-between;
@@ -90,9 +88,9 @@ ul {
 }
 
 
-/* ========================================
-   CONTENIDO GENERAL
-======================================== */
+/* 
+   CONTENIDO General
+ */
 main {
     max-width: 1200px;
     margin: auto;
@@ -111,9 +109,7 @@ h2 {
 }
 
 
-/* ========================================
-   HERO
-======================================== */
+
 .hero {
     position: relative;
     min-height: 500px;
@@ -153,9 +149,10 @@ h2 {
 }
 
 
-/* ========================================
-   BOTONES
-======================================== */
+
+
+
+
 .boton-primario,
 .boton-consultar {
     display: inline-block;
@@ -211,9 +208,9 @@ h2 {
 }
 
 
-/* ========================================
+/* 
    PRODUCTOS - GRID
-======================================== */
+*/
 .grilla-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -254,9 +251,9 @@ h2 {
 }
 
 
-/* ========================================
+/* 
    TALLES
-======================================== */
+ */
 .talles {
     display: flex;
     gap: 7px;
@@ -271,18 +268,18 @@ h2 {
 }
 
 
-/* ========================================
+/* 
    BOTÓN CONSULTAR
-======================================== */
+= */
 .boton-consultar {
     width: 100%;
     text-align: center;
 }
 
 
-/* ========================================
+/* 
    VER MÁS
-======================================== */
+ */
 .link-ver-mas {
     display: block;
     text-align: center;
@@ -296,9 +293,9 @@ h2 {
 }
 
 
-/* ========================================
+/* 
    SOBRE NOSOTRAS
-======================================== */
+ */
 .sobre-marca {
     text-align: center;
     background-color: var(--beige);
@@ -339,9 +336,7 @@ h2 {
 }
 
 
-/* ========================================
-   FOOTER
-======================================== */
+/* FOOTER */
 .footer {
     background-color: var(--marron);
     color: var(--blanco);
@@ -539,4 +534,166 @@ h2 {
 .link-admin:hover {
     opacity: 1;
     color: var(--rosa);
+}
+
+/*  --cONTACTO--  */
+.intro-contacto {
+    text-align: center;
+    margin-bottom: var(--espacio-lg);
+}
+
+.intro-contacto h1 {
+    color: var(--bordo);
+    font-size: 36px;
+    margin-bottom: var(--espacio-xs);
+}
+
+.intro-contacto p {
+    color: var(--gris);
+}
+
+
+/* --- Layout de 2 columnas (GRID) --- */
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--espacio-lg);
+    align-items: start;
+}
+
+
+/* --Formulario-- */
+.form-contacto {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: var(--espacio-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.form-contacto h2,
+.datos-contacto h2 {
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+.campo label {
+    color: var(--marron);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--marron);
+    background-color: var(--blanco);
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--rosa);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #b5aaaa;
+}
+
+
+/* --mail y telefono-- */
+.campo-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacio-sm);
+}
+
+
+/* --Boton de envio-- */
+.form-contacto .boton-primario {
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* --Columna de datos-- */
+.datos-contacto {
+    background-color: var(--rosa-claro);
+    border-radius: var(--radio);
+    padding: var(--espacio-lg) var(--espacio-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.lista-datos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.lista-datos h3 {
+    color: var(--bordo);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.lista-datos a,
+.lista-datos p {
+    color: var(--gris);
+    font-size: 15px;
+}
+
+.lista-datos a:hover {
+    color: var(--rosa);
+}
+
+.datos-contacto .boton-primario {
+    text-align: center;
+}
+
+
+/* --ESPONSIVE-- */
+@media (max-width: 900px) {
+
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .campo-doble {
+        grid-template-columns: 1fr;
+    }
+
+    .form-contacto,
+    .datos-contacto {
+        padding: var(--espacio-md);
+    }
 }
