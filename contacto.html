@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Claudette</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER (igual en todas) ===== -->
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa">
+    </a>
+
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO ===== -->
+  <main class="main-contacto">
+
+    <section class="intro-contacto">
+      <h1>Contacto</h1>
+      <p>Escribinos y te respondemos a la brevedad.</p>
+    </section>
+
+    <section class="contenido-contacto">
+
+      <!-- Columna 1: formulario -->
+      <form class="form-contacto" action="#" method="post">
+        <h2>Envianos tu consulta</h2>
+
+        <div class="campo">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tunombre@mail.com" required>
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Telefono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="381 555 1234">
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="motivo">Motivo de la consulta</label>
+          <select id="motivo" name="motivo" required>
+            <option value="">Elegi una opcion</option>
+            <option value="producto">Consulta por un producto</option>
+            <option value="talles">Talles y disponibilidad</option>
+            <option value="envios">Envios</option>
+            <option value="cambios">Cambios y devoluciones</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contanos en que podemos ayudarte" required></textarea>
+        </div>
+
+        <button class="boton-primario" type="submit">Enviar consulta</button>
+      </form>
+
+      <!-- Columna 2: otros medios -->
+      <aside class="datos-contacto">
+        <h2>Otros medios</h2>
+
+        <ul class="lista-datos">
+          <li>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/5493815551234">+54 9 381 555-1234</a>
+          </li>
+          <li>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/claudette.r.h">@claudette.r.h</a>
+          </li>
+          <li>
+            <h3>Email</h3>
+            <a href="mailto:hola@claudette.com">hola@claudette.com</a>
+          </li>
+          <li>
+            <h3>Horarios</h3>
+            <p>Lunes a viernes de 9 a 18 h<br>Sabados de 9 a 13 h</p>
+          </li>
+        </ul>
+
+        <a class="boton-primario" href="https://wa.me/5493815551234">Escribinos por WhatsApp</a>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contactos">
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
+      <a href="https://wa.me/5493815551234">WhatsApp</a>
+    </div>
+
+    <p class="footer-copy">Claudette - Todos los derechos reservados</p>
+
+    <a class="link-admin" href="admin/login.html">Administracion</a>
+  </footer>
+
+</body>
+</html>
