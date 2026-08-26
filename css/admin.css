@@ -1,0 +1,569 @@
+
+:root {
+    --admin-fondo: #f4f1ee;
+    --admin-verde: #4b7a58;
+    --admin-verde-claro: #e3efe6;
+    --admin-alerta: #a8452f;
+}
+
+.body-admin {
+    background-color: var(--admin-fondo);
+}
+
+
+.layout-admin {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+}
+
+
+.menu-admin {
+    background-color: var(--marron);
+    color: var(--blanco);
+    padding: var(--espacio-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-lg);
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.logo-admin img {
+    width: 90px;
+    margin: auto;
+    border-radius: var(--radio);
+}
+
+.nav-admin ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+.nav-admin a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-admin a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-admin a.activo {
+    background-color: var(--rosa);
+}
+
+
+.contenido-admin {
+    max-width: none;
+    margin: 0;
+    padding: var(--espacio-lg);
+}
+
+.encabezado-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+    margin-bottom: var(--espacio-lg);
+}
+
+.encabezado-admin h1 {
+    color: var(--bordo);
+    font-size: 28px;
+}
+
+
+.boton-admin {
+    display: inline-block;
+    background-color: var(--bordo);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 15px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-admin:hover {
+    background-color: var(--rosa);
+}
+
+
+.filtros-admin {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: var(--espacio-sm);
+    align-items: end;
+}
+
+.campo-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-admin label {
+    color: var(--gris);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo-admin input,
+.campo-admin select,
+.campo-admin textarea {
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--marron);
+    background-color: var(--blanco);
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.campo-admin input:focus,
+.campo-admin select:focus,
+.campo-admin textarea:focus {
+    outline: none;
+    border-color: var(--rosa);
+}
+
+
+.tabla-scroll {
+    overflow-x: auto;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+}
+
+.tabla-admin {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+.tabla-admin th,
+.tabla-admin td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tabla-admin thead th {
+    background-color: var(--rosa-claro);
+    color: var(--bordo);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tabla-admin tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-admin tbody tr:hover {
+    background-color: var(--beige);
+}
+
+.col-numero {
+    text-align: right;
+}
+
+
+.etiqueta {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.etiqueta-activo {
+    background-color: var(--admin-verde-claro);
+    color: var(--admin-verde);
+}
+
+.etiqueta-pausado {
+    background-color: var(--borde);
+    color: var(--gris);
+}
+
+.stock-bajo {
+    color: var(--admin-alerta);
+    font-weight: bold;
+}
+
+
+.acciones {
+    display: flex;
+    gap: var(--espacio-sm);
+    white-space: nowrap;
+}
+
+.link-accion {
+    color: var(--bordo);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.link-accion:hover {
+    color: var(--rosa);
+}
+
+.link-baja:hover {
+    color: var(--admin-alerta);
+}
+
+.pie-tabla {
+    color: var(--gris);
+    font-size: 14px;
+    margin-top: var(--espacio-sm);
+}
+
+
+/* 
+   RESPONSIVE - TABLET
+ */
+@media (max-width: 900px) {
+
+    .layout-admin {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-admin {
+        position: static;
+        height: auto;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: var(--espacio-sm);
+    }
+
+    .logo-admin img {
+        width: 60px;
+        margin: 0;
+    }
+
+    .nav-admin ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .filtros-admin {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* 
+   RESPONSIVE - CELULAR
+ */
+@media (max-width: 600px) {
+
+    .contenido-admin {
+        padding: var(--espacio-md) var(--espacio-sm);
+    }
+
+    .filtros-admin {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 
+   TARJETAS
+ */
+.tarjeta-admin {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: var(--espacio-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.titulo-tarjeta {
+    text-align: left;
+    color: var(--bordo);
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-bottom: var(--espacio-xs);
+    border-bottom: 1px solid var(--borde);
+}
+
+.ayuda {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+
+/* 
+   FORMULARIO DE PRODUCTO
+ */
+.form-producto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--espacio-md);
+    align-items: start;
+}
+
+.columna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.fila-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacio-sm);
+}
+
+.campo-corto {
+    max-width: 200px;
+}
+
+.campo-admin input[readonly] {
+    background-color: var(--beige);
+    color: var(--gris);
+    cursor: not-allowed;
+}
+
+.campo-admin input[type="file"] {
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.campo-admin textarea {
+    resize: vertical;
+}
+
+
+/* 
+   TALLES Y CHECKBOX
+ */
+.grupo-campos {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+.grupo-campos legend {
+    color: var(--marron);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: var(--espacio-xs);
+}
+
+.grupo-talles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-xs);
+}
+
+.check-talle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.check-talle:hover {
+    border-color: var(--rosa);
+}
+
+.check-simple {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacio-xs);
+
+    color: var(--marron);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* 
+   VISTA PREVIA DE IMAGEN
+ */
+.vista-previa {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 7px;
+    border: 1px solid var(--borde);
+}
+
+
+/* 
+   BOTON SECUNDARIO Y ACCIONES DEL FORM
+ */
+.boton-secundario {
+    display: inline-block;
+    background-color: var(--blanco);
+    color: var(--bordo);
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 10px 20px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-secundario:hover {
+    border-color: var(--rosa);
+    color: var(--rosa);
+}
+
+.acciones-form {
+    grid-column: 1 / -1;
+
+    display: flex;
+    gap: var(--espacio-sm);
+    align-items: center;
+}
+
+
+/* 
+   CLIENTES
+*/
+.filtros-clientes {
+    grid-template-columns: 2fr 1fr auto;
+}
+
+
+/* 
+   LOGIN
+   (pisa el "main" de style.css)
+ */
+.pantalla-login {
+    max-width: none;
+    margin: 0;
+    padding: var(--espacio-md);
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 400px;
+
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: var(--espacio-lg);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.logo-login img {
+    width: 110px;
+    margin: auto;
+    border-radius: var(--radio);
+}
+
+.tarjeta-login h1 {
+    color: var(--bordo);
+    font-size: 24px;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+    text-align: left;
+}
+
+.link-volver {
+    color: var(--gris);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.link-volver:hover {
+    color: var(--rosa);
+}
+
+
+/* 
+   RESPONSIVE - FORMULARIO Y CLIENTES
+ */
+@media (max-width: 900px) {
+
+    .form-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-clientes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .fila-form {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-corto {
+        max-width: none;
+    }
+
+    .filtros-clientes {
+        grid-template-columns: 1fr;
+    }
+
+    .acciones-form {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .acciones-form .boton-admin,
+    .acciones-form .boton-secundario {
+        text-align: center;
+    }
+}
