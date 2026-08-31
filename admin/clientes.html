@@ -1,164 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clientes | Admin Claudette</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/admin.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes | Admin Claudette</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
 
-<body class="body-admin">
+  <body class="body-admin">
+    <div class="layout-admin">
+      <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
+      <aside class="menu-admin">
+        <a class="logo-admin" href="productos.html">
+          <img src="../img/ui/logo.jpeg" alt="Claudette" />
+        </a>
 
-  <div class="layout-admin">
+        <nav class="nav-admin">
+          <ul>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a class="activo" href="clientes.html">Clientes</a></li>
+            <li><a href="../index.html">Ver el sitio</a></li>
+            <li><a href="login.html">Cerrar sesión</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-    <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
-    <aside class="menu-admin">
-      <a class="logo-admin" href="productos.html">
-        <img src="../img/ui/logo.jpeg" alt="Claudette">
-      </a>
+      <!-- ===== CONTENIDO ===== -->
+      <main class="contenido-admin">
+        <header class="encabezado-admin">
+          <h1>Clientes</h1>
+        </header>
 
-      <nav class="nav-admin">
-        <ul>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a class="activo" href="clientes.html">Clientes</a></li>
-          <li><a href="../index.html">Ver el sitio</a></li>
-          <li><a href="login.html">Cerrar sesión</a></li>
-        </ul>
-      </nav>
-    </aside>
+        <!-- Filtros -->
+        <form class="filtros-admin filtros-clientes" action="#" method="get">
+          <div class="campo-admin">
+            <label for="buscar">Buscar</label>
+            <input
+              type="search"
+              id="buscar"
+              name="buscar"
+              placeholder="Nombre, email o teléfono"
+            />
+          </div>
 
-    <!-- ===== CONTENIDO ===== -->
-    <main class="contenido-admin">
+          <div class="campo-admin">
+            <label for="orden">Ordenar por</label>
+            <select id="orden" name="orden">
+              <option value="reciente">Más recientes</option>
+              <option value="antiguo">Más antiguos</option>
+              <option value="nombre">Nombre (A-Z)</option>
+            </select>
+          </div>
 
-      <header class="encabezado-admin">
-        <h1>Clientes</h1>
-      </header>
+          <button class="boton-admin" type="submit">Filtrar</button>
+        </form>
 
-      <!-- Filtros -->
-      <form class="filtros-admin filtros-clientes" action="#" method="get">
+        <!-- Tabla -->
+        <div class="tabla-scroll">
+          <table class="tabla-admin">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre y apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Localidad</th>
+                <th>Alta</th>
+                <th>Contacto</th>
+              </tr>
+            </thead>
 
-        <div class="campo-admin">
-          <label for="buscar">Buscar</label>
-          <input type="search" id="buscar" name="buscar" placeholder="Nombre, email o teléfono">
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Sofía Gómez</td>
+                <td>sofia.gomez@mail.com</td>
+                <td>381 555 1122</td>
+                <td>San Miguel de Tucumán</td>
+                <td>12/08/2026</td>
+                <td>
+                  <div class="acciones">
+                    <a class="link-accion" href="mailto:sofia.gomez@mail.com"
+                      >Email</a
+                    >
+                    <a class="link-accion" href="https://wa.me/5493815551122"
+                      >WhatsApp</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Marina López</td>
+                <td>marina.lopez@mail.com</td>
+                <td>381 555 3344</td>
+                <td>Yerba Buena</td>
+                <td>09/08/2026</td>
+                <td>
+                  <div class="acciones">
+                    <a class="link-accion" href="mailto:marina.lopez@mail.com"
+                      >Email</a
+                    >
+                    <a class="link-accion" href="https://wa.me/5493815553344"
+                      >WhatsApp</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Carla Fernández</td>
+                <td>carla.fernandez@mail.com</td>
+                <td>381 555 5566</td>
+                <td>Tafí Viejo</td>
+                <td>02/08/2026</td>
+                <td>
+                  <div class="acciones">
+                    <a
+                      class="link-accion"
+                      href="mailto:carla.fernandez@mail.com"
+                      >Email</a
+                    >
+                    <a class="link-accion" href="https://wa.me/5493815555566"
+                      >WhatsApp</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Julieta Ríos</td>
+                <td>julieta.rios@mail.com</td>
+                <td>381 555 7788</td>
+                <td>San Miguel de Tucumán</td>
+                <td>28/07/2026</td>
+                <td>
+                  <div class="acciones">
+                    <a class="link-accion" href="mailto:julieta.rios@mail.com"
+                      >Email</a
+                    >
+                    <a class="link-accion" href="https://wa.me/5493815557788"
+                      >WhatsApp</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Ana Paula Suárez</td>
+                <td>anapaula.suarez@mail.com</td>
+                <td>381 555 9900</td>
+                <td>Banda del Río Salí</td>
+                <td>21/07/2026</td>
+                <td>
+                  <div class="acciones">
+                    <a
+                      class="link-accion"
+                      href="mailto:anapaula.suarez@mail.com"
+                      >Email</a
+                    >
+                    <a class="link-accion" href="https://wa.me/5493815559900"
+                      >WhatsApp</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="campo-admin">
-          <label for="orden">Ordenar por</label>
-          <select id="orden" name="orden">
-            <option value="reciente">Más recientes</option>
-            <option value="antiguo">Más antiguos</option>
-            <option value="nombre">Nombre (A-Z)</option>
-          </select>
-        </div>
-
-        <button class="boton-admin" type="submit">Filtrar</button>
-
-      </form>
-
-      <!-- Tabla -->
-      <div class="tabla-scroll">
-        <table class="tabla-admin">
-
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre y apellido</th>
-              <th>Email</th>
-              <th>Teléfono</th>
-              <th>Localidad</th>
-              <th>Alta</th>
-              <th>Contacto</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            <tr>
-              <td>1</td>
-              <td>Sofía Gómez</td>
-              <td>sofia.gomez@mail.com</td>
-              <td>381 555 1122</td>
-              <td>San Miguel de Tucumán</td>
-              <td>12/08/2026</td>
-              <td>
-                <div class="acciones">
-                  <a class="link-accion" href="mailto:sofia.gomez@mail.com">Email</a>
-                  <a class="link-accion" href="https://wa.me/5493815551122">WhatsApp</a>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>Marina López</td>
-              <td>marina.lopez@mail.com</td>
-              <td>381 555 3344</td>
-              <td>Yerba Buena</td>
-              <td>09/08/2026</td>
-              <td>
-                <div class="acciones">
-                  <a class="link-accion" href="mailto:marina.lopez@mail.com">Email</a>
-                  <a class="link-accion" href="https://wa.me/5493815553344">WhatsApp</a>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>Carla Fernández</td>
-              <td>carla.fernandez@mail.com</td>
-              <td>381 555 5566</td>
-              <td>Tafí Viejo</td>
-              <td>02/08/2026</td>
-              <td>
-                <div class="acciones">
-                  <a class="link-accion" href="mailto:carla.fernandez@mail.com">Email</a>
-                  <a class="link-accion" href="https://wa.me/5493815555566">WhatsApp</a>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>4</td>
-              <td>Julieta Ríos</td>
-              <td>julieta.rios@mail.com</td>
-              <td>381 555 7788</td>
-              <td>San Miguel de Tucumán</td>
-              <td>28/07/2026</td>
-              <td>
-                <div class="acciones">
-                  <a class="link-accion" href="mailto:julieta.rios@mail.com">Email</a>
-                  <a class="link-accion" href="https://wa.me/5493815557788">WhatsApp</a>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>5</td>
-              <td>Ana Paula Suárez</td>
-              <td>anapaula.suarez@mail.com</td>
-              <td>381 555 9900</td>
-              <td>Banda del Río Salí</td>
-              <td>21/07/2026</td>
-              <td>
-                <div class="acciones">
-                  <a class="link-accion" href="mailto:anapaula.suarez@mail.com">Email</a>
-                  <a class="link-accion" href="https://wa.me/5493815559900">WhatsApp</a>
-                </div>
-              </td>
-            </tr>
-
-          </tbody>
-
-        </table>
-      </div>
-
-      <p class="pie-tabla">Mostrando 5 clientes</p>
-
-    </main>
-
-  </div>
-
-</body>
+        <p class="pie-tabla">Mostrando 5 clientes</p>
+      </main>
+    </div>
+  </body>
 </html>

@@ -1,153 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar producto | Admin Claudette</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/admin.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar producto | Admin Claudette</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
 
-<body class="body-admin">
+  <body class="body-admin">
+    <div class="layout-admin">
+      <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
+      <aside class="menu-admin">
+        <a class="logo-admin" href="productos.html">
+          <img src="../img/ui/logo.jpeg" alt="Claudette" />
+        </a>
 
-  <div class="layout-admin">
+        <nav class="nav-admin">
+          <ul>
+            <li><a class="activo" href="productos.html">Productos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="../index.html">Ver el sitio</a></li>
+            <li><a href="login.html">Cerrar sesión</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-    <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
-    <aside class="menu-admin">
-      <a class="logo-admin" href="productos.html">
-        <img src="../img/ui/logo.jpeg" alt="Claudette">
-      </a>
+      <!-- ===== CONTENIDO ===== -->
+      <main class="contenido-admin">
+        <header class="encabezado-admin">
+          <h1>Editar producto</h1>
+          <a class="boton-secundario" href="productos.html"
+            >Volver al listado</a
+          >
+        </header>
 
-      <nav class="nav-admin">
-        <ul>
-          <li><a class="activo" href="productos.html">Productos</a></li>
-          <li><a href="clientes.html">Clientes</a></li>
-          <li><a href="../index.html">Ver el sitio</a></li>
-          <li><a href="login.html">Cerrar sesión</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- ===== CONTENIDO ===== -->
-    <main class="contenido-admin">
-
-      <header class="encabezado-admin">
-        <h1>Editar producto</h1>
-        <a class="boton-secundario" href="productos.html">Volver al listado</a>
-      </header>
-
-      <form class="form-producto" action="productos.html" method="post" enctype="multipart/form-data">
-
-        <!-- ===== Columna principal ===== -->
-        <div class="tarjeta-admin">
-
-          <h2 class="titulo-tarjeta">Datos del producto</h2>
-
-          <div class="campo-admin campo-corto">
-            <label for="id">ID</label>
-            <input type="text" id="id" name="id" value="1" readonly>
-            <small class="ayuda">Se asigna solo. No se edita.</small>
-          </div>
-
-          <div class="campo-admin">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" value="Vestido floreado" placeholder="Vestido floreado" required>
-          </div>
-
-          <div class="fila-form">
-
-            <div class="campo-admin">
-              <label for="categoria">Categoría</label>
-              <select id="categoria" name="categoria" required>
-                <option value="">Elegí una categoría</option>
-                <option value="remeras">Remeras</option>
-                <option value="pantalones">Pantalones</option>
-                <option value="vestidos" selected>Vestidos</option>
-                <option value="abrigos">Abrigos</option>
-                <option value="calzado">Calzado</option>
-                <option value="accesorios">Accesorios</option>
-              </select>
-            </div>
-
-            <div class="campo-admin">
-              <label for="precio">Precio</label>
-              <input type="number" id="precio" name="precio" value="45000" min="0" step="100" required>
-              <small class="ayuda">Solo números, sin $ ni puntos.</small>
-            </div>
-
-          </div>
-
-          <div class="campo-admin">
-            <label for="descripcion">Descripción</label>
-            <textarea id="descripcion" name="descripcion" rows="5" placeholder="Contá el material, el calce y con qué combina">Vestido floral de temporada, ideal para ocasiones especiales.</textarea>
-          </div>
-
-          <fieldset class="grupo-campos">
-            <legend>Talles disponibles</legend>
-
-            <div class="grupo-talles">
-              <label class="check-talle"><input type="checkbox" name="talles" value="s" checked> S</label>
-              <label class="check-talle"><input type="checkbox" name="talles" value="m" checked> M</label>
-              <label class="check-talle"><input type="checkbox" name="talles" value="l" checked> L</label>
-              <label class="check-talle"><input type="checkbox" name="talles" value="xl"> XL</label>
-              <label class="check-talle"><input type="checkbox" name="talles" value="unico"> Único</label>
-            </div>
-          </fieldset>
-
-          <div class="campo-admin campo-corto">
-            <label for="stock">Stock</label>
-            <input type="number" id="stock" name="stock" value="8" min="0" required>
-            <small class="ayuda">Cantidad total, sin distinguir talle.</small>
-          </div>
-
-        </div>
-
-        <!-- ===== Columna lateral ===== -->
-        <aside class="columna-lateral">
-
+        <form
+          class="form-producto"
+          action="productos.html"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <!-- ===== Columna principal ===== -->
           <div class="tarjeta-admin">
-            <h2 class="titulo-tarjeta">Publicación</h2>
+            <h2 class="titulo-tarjeta">Datos del producto</h2>
 
-            <div class="campo-admin">
-              <label for="estado">Estado</label>
-              <select id="estado" name="estado">
-                <option value="activo" selected>Activo</option>
-                <option value="pausado">Pausado</option>
-              </select>
-              <small class="ayuda">Pausado no aparece en el catálogo.</small>
+            <div class="campo-admin campo-corto">
+              <label for="id">ID</label>
+              <input type="text" id="id" name="id" value="1" readonly />
+              <small class="ayuda">Se asigna solo. No se edita.</small>
             </div>
 
-            <label class="check-simple">
-              <input type="checkbox" name="destacado" value="si" checked>
-              Mostrar en los destacados de la home
-            </label>
-          </div>
+            <div class="campo-admin">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                value="Vestido floreado"
+                placeholder="Vestido floreado"
+                required
+              />
+            </div>
 
-          <div class="tarjeta-admin">
-            <h2 class="titulo-tarjeta">Imagen</h2>
+            <div class="fila-form">
+              <div class="campo-admin">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria" required>
+                  <option value="">Elegí una categoría</option>
+                  <option value="remeras">Remeras</option>
+                  <option value="pantalones">Pantalones</option>
+                  <option value="vestidos" selected>Vestidos</option>
+                  <option value="abrigos">Abrigos</option>
+                  <option value="calzado">Calzado</option>
+                  <option value="accesorios">Accesorios</option>
+                </select>
+              </div>
 
-            <img class="vista-previa" src="../img/productos/images.jpg" alt="Vista previa del producto">
+              <div class="campo-admin">
+                <label for="precio">Precio</label>
+                <input
+                  type="number"
+                  id="precio"
+                  name="precio"
+                  value="45000"
+                  min="0"
+                  step="100"
+                  required
+                />
+                <small class="ayuda">Solo números, sin $ ni puntos.</small>
+              </div>
+            </div>
 
             <div class="campo-admin">
-              <label for="imagen">Cambiar imagen</label>
-              <input type="file" id="imagen" name="imagen" accept="image/*">
-              <small class="ayuda">JPG o PNG. Preferentemente cuadrada.</small>
+              <label for="descripcion">Descripción</label>
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                rows="5"
+                placeholder="Contá el material, el calce y con qué combina"
+              >
+Vestido floral de temporada, ideal para ocasiones especiales.</textarea
+              >
+            </div>
+
+            <fieldset class="grupo-campos">
+              <legend>Talles disponibles</legend>
+
+              <div class="grupo-talles">
+                <label class="check-talle"
+                  ><input type="checkbox" name="talles" value="s" checked />
+                  S</label
+                >
+                <label class="check-talle"
+                  ><input type="checkbox" name="talles" value="m" checked />
+                  M</label
+                >
+                <label class="check-talle"
+                  ><input type="checkbox" name="talles" value="l" checked />
+                  L</label
+                >
+                <label class="check-talle"
+                  ><input type="checkbox" name="talles" value="xl" /> XL</label
+                >
+                <label class="check-talle"
+                  ><input type="checkbox" name="talles" value="unico" />
+                  Único</label
+                >
+              </div>
+            </fieldset>
+
+            <div class="campo-admin campo-corto">
+              <label for="stock">Stock</label>
+              <input
+                type="number"
+                id="stock"
+                name="stock"
+                value="8"
+                min="0"
+                required
+              />
+              <small class="ayuda">Cantidad total, sin distinguir talle.</small>
             </div>
           </div>
 
-        </aside>
+          <!-- ===== Columna lateral ===== -->
+          <aside class="columna-lateral">
+            <div class="tarjeta-admin">
+              <h2 class="titulo-tarjeta">Publicación</h2>
 
-        <!-- ===== Acciones ===== -->
-        <div class="acciones-form">
-          <button class="boton-admin" type="submit">Guardar producto</button>
-          <a class="boton-secundario" href="productos.html">Cancelar</a>
-        </div>
+              <div class="campo-admin">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                  <option value="activo" selected>Activo</option>
+                  <option value="pausado">Pausado</option>
+                </select>
+                <small class="ayuda">Pausado no aparece en el catálogo.</small>
+              </div>
 
-      </form>
+              <label class="check-simple">
+                <input type="checkbox" name="destacado" value="si" checked />
+                Mostrar en los destacados de la home
+              </label>
+            </div>
 
-    </main>
+            <div class="tarjeta-admin">
+              <h2 class="titulo-tarjeta">Imagen</h2>
 
-  </div>
+              <img
+                class="vista-previa"
+                src="../img/productos/images.jpg"
+                alt="Vista previa del producto"
+              />
 
-</body>
+              <div class="campo-admin">
+                <label for="imagen">Cambiar imagen</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" />
+                <small class="ayuda"
+                  >JPG o PNG. Preferentemente cuadrada.</small
+                >
+              </div>
+            </div>
+          </aside>
+
+          <!-- ===== Acciones ===== -->
+          <div class="acciones-form">
+            <button class="boton-admin" type="submit">Guardar producto</button>
+            <a class="boton-secundario" href="productos.html">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>
