@@ -1,97 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claudette | Detalle de producto</title>
-  <meta name="description" content="Vestido floreado de tela liviana, corte suelto. Talles S, M, L. Envíos a todo el país - Claudette.">
-  <meta name="keywords" content="ropa mujer, vestidos, remeras, tienda online, Claudette, Tucumán">
-  <meta property="og:title" content="Claudette | Vestido floreado">
-  <meta property="og:description" content="Vestido floreado de tela liviana, corte suelto y mangas cortas.">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Claudette | Detalle de producto</title>
+        <meta
+            name="description"
+            content="Vestido floreado de tela liviana, corte suelto. Talles S, M, L. Envíos a todo el país - Claudette."
+        />
+        <meta
+            name="keywords"
+            content="ropa mujer, vestidos, remeras, tienda online, Claudette, Tucumán"
+        />
+        <meta property="og:title" content="Claudette | Vestido floreado" />
+        <meta
+            property="og:description"
+            content="Vestido floreado de tela liviana, corte suelto y mangas cortas."
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<body>
+    <body>
+        <header class="header">
+            <a class="logo" href="index.html">
+                <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" />
+            </a>
 
-  <header class="header">
-    <a class="logo" href="index.html">
-      <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa">
-    </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="#contactos">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav class="nav-principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catalogo</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="#contactos">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+        <main>
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="catalogo.html">Catalogo</a> /
+                <span>Vestido floreado</span>
+            </nav>
 
-  <main>
+            <section class="detalle-producto">
+                <div class="galeria-producto">
+                    <figure class="galeria-principal">
+                        <img src="img/productos/ejemplo.jpg" alt="Vestido floreado" />
+                    </figure>
 
-    <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="index.html">Inicio</a> /
-      <a href="catalogo.html">Catalogo</a> /
-      <span>Vestido floreado</span>
-    </nav>
+                    <ul class="galeria-miniaturas">
+                        <li><img src="img/productos/ejemplo.jpg" alt="Vista frontal" /></li>
+                        <li><img src="img/productos/ejemplo.jpg" alt="Vista trasera" /></li>
+                        <li><img src="img/productos/ejemplo.jpg" alt="Detalle de tela" /></li>
+                    </ul>
+                </div>
 
-    <section class="detalle-producto">
+                <div class="info-producto">
+                    <h1>Vestido floreado</h1>
+                    <p class="precio">$45.000</p>
+                    <p class="stock-disponible">En stock</p>
 
-      <div class="galeria-producto">
-        <figure class="galeria-principal">
-          <img src="img/productos/ejemplo.jpg" alt="Vestido floreado">
-        </figure>
+                    <fieldset class="selector-talles">
+                        <legend>Talle</legend>
+                        <ul class="talles">
+                            <li>
+                                <label><input type="radio" name="talle" value="S" /> S</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="talle" value="M" /> M</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="talle" value="L" /> L</label>
+                            </li>
+                        </ul>
+                    </fieldset>
 
-        <ul class="galeria-miniaturas">
-          <li><img src="img/productos/ejemplo.jpg" alt="Vista frontal"></li>
-          <li><img src="img/productos/ejemplo.jpg" alt="Vista trasera"></li>
-          <li><img src="img/productos/ejemplo.jpg" alt="Detalle de tela"></li>
-        </ul>
-      </div>
+                    <div class="selector-cantidad">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" name="cantidad" value="1" min="1" />
+                    </div>
 
-      <div class="info-producto">
-        <h1>Vestido floreado</h1>
-        <p class="precio">$45.000</p>
-        <p class="stock-disponible">En stock</p>
+                    <a class="boton-consultar" href="https://wa.me/5493815551234"
+                        >Consultar por WhatsApp</a
+                    >
 
-        <fieldset class="selector-talles">
-          <legend>Talle</legend>
-          <ul class="talles">
-            <li><label><input type="radio" name="talle" value="S"> S</label></li>
-            <li><label><input type="radio" name="talle" value="M"> M</label></li>
-            <li><label><input type="radio" name="talle" value="L"> L</label></li>
-          </ul>
-        </fieldset>
+                    <div class="descripcion-producto">
+                        <h2>Descripcion</h2>
+                        <p>
+                            Vestido floreado de tela liviana, corte suelto y mangas cortas. Ideal
+                            para primavera y verano.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <div class="selector-cantidad">
-          <label for="cantidad">Cantidad</label>
-          <input type="number" id="cantidad" name="cantidad" value="1" min="1">
-        </div>
+        <footer class="footer" id="contactos">
+            <div class="footer-redes">
+                <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
+                <a href="https://wa.me/5493815551234">WhatsApp</a>
+            </div>
 
-        <a class="boton-consultar" href="https://wa.me/5493815551234">Consultar por WhatsApp</a>
-
-        <div class="descripcion-producto">
-          <h2>Descripcion</h2>
-          <p>
-            Vestido floreado de tela liviana, corte suelto y mangas cortas.
-            Ideal para primavera y verano.
-          </p>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="footer" id="contactos">
-    <div class="footer-redes">
-      <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
-      <a href="https://wa.me/5493815551234">WhatsApp</a>
-    </div>
-
-    <p class="footer-copy">Claudette - Todos los derechos reservados</p>
-  </footer>
-
-</body>
+            <p class="footer-copy">Claudette - Todos los derechos reservados</p>
+        </footer>
+    </body>
 </html>
