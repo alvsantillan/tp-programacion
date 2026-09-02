@@ -49,7 +49,12 @@ tienda-claudia/
 │   └── ui/
 └── README.md
 ```
+## SEO (posicionamiento en buscadores)
 
+Le agregamos a las páginas unas etiquetas especiales dentro del `<head>` que no se ven en pantalla, pero ayudan a que la página aparezca mejor en Google y se vea bien cuando alguien comparte el link.
 
+- Descripción (`description`): es el texto corto que aparece debajo del título cuando alguien busca algo en Google. Le pusimos un resumen del producto para que la gente sepa de qué se trata antes de entrar.
+- Palabras clave (`keywords`): son las palabras que más se relacionan con la página (por ejemplo: ropa, vestidos, Claudette), para ayudar a que el sitio se encuentre más fácil.
+- Open Graph (`og:title`, `og:description`): sirve para que, cuando alguien comparte el link por WhatsApp o Instagram, se vea una vista previa prolija con el título y una descripción, en vez de mostrar solo el link pelado.
 
-
+En resumen: son detalles chicos que no cambian cómo se ve la página para el usuario, pero ayudan a que el sitio se vea mejor cuando lo buscan o lo comparten.
