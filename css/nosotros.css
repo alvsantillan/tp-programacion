@@ -1,0 +1,54 @@
+.historia-marca {
+    text-align: center;
+}
+
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-lg);
+    background-color: var(--beige);
+    padding: 40px;
+    border-radius: var(--radio);
+    text-align: left;
+}
+
+.historia-contenido img {
+    width: 320px;
+    flex-shrink: 0;
+    border-radius: var(--radio);
+}
+
+.historia-texto p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+
+.valores-marca {
+    text-align: center;
+}
+
+.grilla-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-valor {
+    background-color: var(--rosa-claro);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+.card-valor h3 {
+    color: var(--bordo);
+}
+
+.card-valor p {
+    color: var(--gris);
+    font-size: 15px;
+}
