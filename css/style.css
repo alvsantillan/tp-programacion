@@ -1,3 +1,5 @@
+
+
 /*  -VARIABLES-  */
 :root {
     --rosa: #c58b8b;
@@ -20,7 +22,7 @@
 }
 
 
-/* 
+/*
    RESET
  */
 * {
@@ -52,9 +54,7 @@ ul {
 }
 
 
-/* 
-   HEADER
- */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@ ul {
 }
 
 
-/* 
+/*
    CONTENIDO General
  */
 main {
@@ -110,6 +110,7 @@ h2 {
 
 
 
+/*
 .hero {
     position:relative;
     min-height: 500px;
@@ -151,10 +152,8 @@ h2 {
     font-size: 18px;
     margin-bottom: 20px;
 }
-
-
-
-
+*/
+/* ===== fin del bloque HERO comentado ===== */
 
 
 .boton-primario,
@@ -173,9 +172,8 @@ h2 {
 }
 
 
-/* ========================================
-   CATEGORÍAS
-======================================== */
+
+/*
 .lista-categorias {
     display: flex;
     justify-content: center;
@@ -210,10 +208,14 @@ h2 {
     color: var(--bordo);
     font-weight: bold;
 }
+*/
+/* ===== fin del bloque CATEGORIAS comentado ===== */
 
 
-/* 
+/*
    PRODUCTOS - GRID
+   (sigue activo: lo usan producto.html / nosotros.html.
+    En index.html se reemplazo por .card de Bootstrap)
 */
 .grilla-productos {
     display: grid;
@@ -255,7 +257,7 @@ h2 {
 }
 
 
-/* 
+/*
    TALLES
  */
 .talles {
@@ -272,7 +274,7 @@ h2 {
 }
 
 
-/* 
+/*
    BOTÓN CONSULTAR
 = */
 .boton-consultar {
@@ -281,7 +283,7 @@ h2 {
 }
 
 
-/* 
+/*
    VER MÁS
  */
 .link-ver-mas {
@@ -297,9 +299,8 @@ h2 {
 }
 
 
-/* 
-   SOBRE NOSOTRAS
- */
+
+/*
 .sobre-marca {
     text-align: center;
     background-color: var(--beige);
@@ -312,11 +313,12 @@ h2 {
     margin: auto;
     color: var(--gris);
 }
+*/
 
 
-/* ========================================
-   INFORMACIÓN DE COMPRA
-======================================== */
+
+
+/*
 .info-compra {
     background-color: var(--rosa-claro);
     padding: 35px;
@@ -338,9 +340,12 @@ h2 {
 .info-compra p {
     color: var(--gris);
 }
+*/
 
 
-/* FOOTER */
+
+/* FOOTER
+    */
 .footer {
     background-color: var(--marron);
     color: var(--blanco);
@@ -369,9 +374,7 @@ h2 {
 }
 
 
-/* ========================================
-   RESPONSIVE - TABLET
-======================================== */
+/*RESPONSIVE - TABLET */
 @media (max-width: 900px) {
 
     .grilla-productos {
@@ -383,15 +386,17 @@ h2 {
         gap: 15px;
     }
 
+    /*
     .hero-texto {
         left: 5%;
     }
+    */
 }
 
 
-/* ========================================
+/* 
    RESPONSIVE - CELULAR
-======================================== */
+ */
 @media (max-width: 600px) {
 
     main {
@@ -404,7 +409,8 @@ h2 {
         gap: 15px;
     }
 
-    .hero,
+    /* 
+    
     .hero-imagen {
         min-height: 450px;
         height: 450px;
@@ -435,16 +441,17 @@ h2 {
         height: 130px;
     }
 
-    .grilla-productos {
-        grid-template-columns: 1fr;
-    }
-
     .info-compra ul {
         flex-direction: column;
     }
 
     .sobre-marca {
         padding: 30px 20px;
+    }
+    */
+
+    .grilla-productos {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -474,10 +481,7 @@ h2 {
     }
 }
 
-/* DETALLE DE PRODUCTO
-   NOTA: .talles, .boton-consultar y .precio
-   ya existen más arriba en este archivo.
-   Acá solo se agrego lo que falta. */
+
 
 .breadcrumb {
     color: var(--gris);
@@ -494,8 +498,6 @@ h2 {
 }
 
 
-/* ---- Layout principal: Grid ----
-   Dos columnas en escritorio: galería | info */
 .detalle-producto {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -575,7 +577,7 @@ h2 {
 
 
 /* ========================================
-   RESPONSIVE - TABLET (mismo corte que el resto del sitio)
+   RESPONSIVE - TABLET 
 ======================================== */
 @media (max-width: 900px) {
 
@@ -613,7 +615,10 @@ h2 {
     color: var(--rosa);
 }
 
-/*  --cONTACTO--  */
+
+
+/*
+--cONTACTO--
 .intro-contacto {
     text-align: center;
     margin-bottom: var(--espacio-lg);
@@ -630,7 +635,7 @@ h2 {
 }
 
 
-/* --- Layout de 2 columnas (GRID) --- */
+--- Layout de 2 columnas (GRID) ---
 .contenido-contacto {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -639,7 +644,7 @@ h2 {
 }
 
 
-/* --Formulario-- */
+--Formulario--
 .form-contacto {
     background-color: var(--blanco);
     border: 1px solid var(--borde);
@@ -700,7 +705,7 @@ h2 {
 }
 
 
-/* --mail y telefono-- */
+--mail y telefono--
 .campo-doble {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -708,7 +713,7 @@ h2 {
 }
 
 
-/* --Boton de envio-- */
+--Boton de envio--
 .form-contacto .boton-primario {
     border: none;
     font-family: inherit;
@@ -717,7 +722,7 @@ h2 {
 }
 
 
-/* --Columna de datos-- */
+--Columna de datos--
 .datos-contacto {
     background-color: var(--rosa-claro);
     border-radius: var(--radio);
@@ -755,7 +760,7 @@ h2 {
 }
 
 
-/* --ESPONSIVE-- */
+--RESPONSIVE--
 @media (max-width: 900px) {
 
     .contenido-contacto {
@@ -774,3 +779,5 @@ h2 {
         padding: var(--espacio-md);
     }
 }
+*/
+
