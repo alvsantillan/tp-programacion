@@ -1,4 +1,4 @@
-.historia-marca {
+/*.historia-marca {
     text-align: center;
 }
 
@@ -51,4 +51,48 @@
 .card-valor p {
     color: var(--gris);
     font-size: 15px;
+}*/
+
+.boton-primario {
+    background-color: var(--bordo);
+    color: var(--blanco);
+}
+
+.boton-primario:hover {
+    background-color: var(--rosa);
+}
+
+.boton-primario:active {
+    background-color: var(--marron);
+}
+
+.main-nosotros h1 {
+    color: var(--bordo);
+}
+
+.main-nosotros section {
+    margin-bottom: 0;
+}
+
+.valores-marca .card {
+    background-color: var(--rosa-claro);
+    border: none;
+}
+
+.valores-marca .card-title {
+    color: var(--bordo);
+}
+
+.main-nosotros h1 {
+    color: var(--blanco);
+    background-color: var(--bordo);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: var(--radio);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-nosotros h1.text-center {
+    display: table;
 }
