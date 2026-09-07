@@ -1,4 +1,4 @@
-
+/*
 :root {
     --admin-fondo: #f4f1ee;
     --admin-verde: #4b7a58;
@@ -240,9 +240,9 @@
 }
 
 
-/* 
+
    RESPONSIVE - TABLET
- */
+ 
 @media (max-width: 900px) {
 
     .layout-admin {
@@ -276,9 +276,9 @@
 }
 
 
-/* 
+
    RESPONSIVE - CELULAR
- */
+ 
 @media (max-width: 600px) {
 
     .contenido-admin {
@@ -291,9 +291,9 @@
 }
 
 
-/* 
+
    TARJETAS
- */
+ 
 .tarjeta-admin {
     background-color: var(--blanco);
     border: 1px solid var(--borde);
@@ -320,9 +320,9 @@
 }
 
 
-/* 
+
    FORMULARIO DE PRODUCTO
- */
+ 
 .form-producto {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -363,9 +363,9 @@
 }
 
 
-/* 
+
    TALLES Y CHECKBOX
- */
+ 
 .grupo-campos {
     border: none;
 
@@ -416,9 +416,9 @@
 }
 
 
-/* 
+
    VISTA PREVIA DE IMAGEN
- */
+ 
 .vista-previa {
     width: 100%;
     height: 220px;
@@ -428,9 +428,9 @@
 }
 
 
-/* 
+
    BOTON SECUNDARIO Y ACCIONES DEL FORM
- */
+ 
 .boton-secundario {
     display: inline-block;
     background-color: var(--blanco);
@@ -461,18 +461,18 @@
 }
 
 
-/* 
+
    CLIENTES
-*/
+
 .filtros-clientes {
     grid-template-columns: 2fr 1fr auto;
 }
 
 
-/* 
-   LOGIN
+
+   
    (pisa el "main" de style.css)
- */
+ 
 .pantalla-login {
     max-width: none;
     margin: 0;
@@ -529,9 +529,9 @@
 }
 
 
-/* 
+
    RESPONSIVE - FORMULARIO Y CLIENTES
- */
+ 
 @media (max-width: 900px) {
 
     .form-producto {
@@ -566,4 +566,100 @@
     .acciones-form .boton-secundario {
         text-align: center;
     }
+}
+*/
+
+:root {
+    --admin-fondo: #f4f1ee;
+    --admin-verde: #4b7a58;
+    --admin-verde-claro: #e3efe6;
+    --admin-alerta: #a8452f;
+}
+
+body {
+    background-color: var(--admin-fondo);
+}
+
+.min-w-0 {
+    min-width: 0;
+}
+
+
+.sidebar-admin {
+    --bs-offcanvas-width: 260px;
+    background-color: var(--marron);
+}
+
+@media (min-width: 992px) {
+    .sidebar-admin {
+        width: 260px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
+
+.sidebar-admin .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-admin .nav-link:hover,
+.sidebar-admin .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.sidebar-admin .nav-link.active {
+    background-color: var(--rosa);
+    color: #fff;
+}
+
+
+.tabla-admin {
+    --bs-table-hover-bg: var(--beige);
+    min-width: 800px;
+}
+
+.tabla-admin thead th {
+    background-color: var(--rosa-claro);
+    color: var(--bordo);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--borde);
+}
+
+
+.form-check-input:checked {
+    background-color: var(--bordo);
+    border-color: var(--bordo);
+}
+
+.form-check-input:focus {
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 0.2rem rgba(197, 139, 139, 0.25);
+}
+
+.btn-check:checked + .btn-talle {
+    background-color: var(--bordo);
+    border-color: var(--bordo);
+    color: #fff;
+}
+
+
+.vista-previa {
+    width: 100%;
+    height: 220px;
+}
+
+
+
+.pantalla-login {
+    background: linear-gradient(160deg, var(--rosa-claro), var(--admin-fondo));
 }
