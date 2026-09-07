@@ -1,181 +1,224 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clientes | Admin Claudette</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/admin.css" />
-  </head>
 
-  <body class="body-admin">
-    <div class="layout-admin">
-      <!-- ===== MENU LATERAL (igual en las 4 de admin) ===== -->
-      <aside class="menu-admin">
-        <a class="logo-admin" href="productos.html">
-          <img src="../img/ui/logo.jpeg" alt="Claudette" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes | Admin Claudette</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../css/admin-custom.css">
+</head>
+
+<body>
+
+  <nav class="navbar bg-marron navbar-dark d-lg-none sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuAdmin"
+        aria-controls="menuAdmin" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-brand titulo mb-0">Admin Claudette</span>
+    </div>
+  </nav>
+
+
+  <div class="d-flex">
+
+    <aside class="sidebar-admin offcanvas-lg offcanvas-start text-white" tabindex="-1" id="menuAdmin"
+      aria-labelledby="tituloMenuAdmin">
+
+      <div class="offcanvas-header border-bottom border-light border-opacity-10">
+        <h5 class="offcanvas-title titulo" id="tituloMenuAdmin">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          data-bs-target="#menuAdmin" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="offcanvas-body flex-column p-3">
+
+        <a class="d-none d-lg-block text-center mb-4" href="productos.html">
+          <img src="../img/ui/logo.jpeg" alt="Claudette" width="90" class="rounded-3">
         </a>
 
-        <nav class="nav-admin">
-          <ul>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a class="activo" href="clientes.html">Clientes</a></li>
-            <li><a href="../index.html">Ver el sitio</a></li>
-            <li><a href="login.html">Cerrar sesión</a></li>
-          </ul>
-        </nav>
-      </aside>
+        <ul class="nav nav-pills flex-column gap-1 w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html"><i class="bi bi-box-seam me-2"></i>Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="clientes.html"><i class="bi bi-people me-2"></i>Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="bi bi-globe me-2"></i>Ver el sitio</a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-left me-2"></i>Cerrar sesion</a>
+          </li>
+        </ul>
 
-      <!-- ===== CONTENIDO ===== -->
-      <main class="contenido-admin">
-        <header class="encabezado-admin">
-          <h1>Clientes</h1>
-        </header>
+      </div>
+    </aside>
 
-        <!-- Filtros -->
-        <form class="filtros-admin filtros-clientes" action="#" method="get">
-          <div class="campo-admin">
-            <label for="buscar">Buscar</label>
-            <input
-              type="search"
-              id="buscar"
-              name="buscar"
-              placeholder="Nombre, email o teléfono"
-            />
-          </div>
 
-          <div class="campo-admin">
-            <label for="orden">Ordenar por</label>
-            <select id="orden" name="orden">
-              <option value="reciente">Más recientes</option>
-              <option value="antiguo">Más antiguos</option>
-              <option value="nombre">Nombre (A-Z)</option>
-            </select>
-          </div>
+    <main class="flex-grow-1 min-w-0 p-3 p-md-4 p-lg-5">
 
-          <button class="boton-admin" type="submit">Filtrar</button>
-        </form>
+      <header class="mb-4">
+        <h1 class="titulo h2 fw-bold text-bordo mb-0">Clientes</h1>
+      </header>
 
-        <!-- Tabla -->
-        <div class="tabla-scroll">
-          <table class="tabla-admin">
+
+      <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-3 p-md-4">
+          <form action="#" method="get" class="row g-3 align-items-end">
+
+            <div class="col-12 col-md-6">
+              <label class="form-label fw-semibold small" for="buscar">Buscar</label>
+              <input class="form-control" type="search" id="buscar" name="buscar"
+                placeholder="Nombre, email o telefono">
+            </div>
+
+            <div class="col-12 col-md-4">
+              <label class="form-label fw-semibold small" for="orden">Ordenar por</label>
+              <select class="form-select" id="orden" name="orden">
+                <option value="reciente">Mas recientes</option>
+                <option value="antiguo">Mas antiguos</option>
+                <option value="nombre">Nombre (A-Z)</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-2 d-grid">
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-funnel me-1"></i>Filtrar
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0 tabla-admin">
+
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Nombre y apellido</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Localidad</th>
-                <th>Alta</th>
-                <th>Contacto</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre y apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Alta</th>
+                <th scope="col" class="text-end">Contacto</th>
               </tr>
             </thead>
 
             <tbody>
+
               <tr>
-                <td>1</td>
-                <td>Sofía Gómez</td>
-                <td>sofia.gomez@mail.com</td>
-                <td>381 555 1122</td>
-                <td>San Miguel de Tucumán</td>
-                <td>12/08/2026</td>
-                <td>
-                  <div class="acciones">
-                    <a class="link-accion" href="mailto:sofia.gomez@mail.com"
-                      >Email</a
-                    >
-                    <a class="link-accion" href="https://wa.me/5493815551122"
-                      >WhatsApp</a
-                    >
-                  </div>
+                <td class="text-secondary">1</td>
+                <td class="fw-semibold">Sofia Gomez</td>
+                <td class="text-secondary">sofia.gomez@mail.com</td>
+                <td class="text-secondary">381 555 1122</td>
+                <td class="text-secondary">San Miguel de Tucuman</td>
+                <td class="text-secondary">12/08/2026</td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary" href="mailto:sofia.gomez@mail.com" aria-label="Enviar email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <a class="btn btn-sm btn-outline-success" href="https://wa.me/5493815551122" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
                 </td>
               </tr>
 
               <tr>
-                <td>2</td>
-                <td>Marina López</td>
-                <td>marina.lopez@mail.com</td>
-                <td>381 555 3344</td>
-                <td>Yerba Buena</td>
-                <td>09/08/2026</td>
-                <td>
-                  <div class="acciones">
-                    <a class="link-accion" href="mailto:marina.lopez@mail.com"
-                      >Email</a
-                    >
-                    <a class="link-accion" href="https://wa.me/5493815553344"
-                      >WhatsApp</a
-                    >
-                  </div>
+                <td class="text-secondary">2</td>
+                <td class="fw-semibold">Marina Lopez</td>
+                <td class="text-secondary">marina.lopez@mail.com</td>
+                <td class="text-secondary">381 555 3344</td>
+                <td class="text-secondary">Yerba Buena</td>
+                <td class="text-secondary">09/08/2026</td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary" href="mailto:marina.lopez@mail.com" aria-label="Enviar email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <a class="btn btn-sm btn-outline-success" href="https://wa.me/5493815553344" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
                 </td>
               </tr>
 
               <tr>
-                <td>3</td>
-                <td>Carla Fernández</td>
-                <td>carla.fernandez@mail.com</td>
-                <td>381 555 5566</td>
-                <td>Tafí Viejo</td>
-                <td>02/08/2026</td>
-                <td>
-                  <div class="acciones">
-                    <a
-                      class="link-accion"
-                      href="mailto:carla.fernandez@mail.com"
-                      >Email</a
-                    >
-                    <a class="link-accion" href="https://wa.me/5493815555566"
-                      >WhatsApp</a
-                    >
-                  </div>
+                <td class="text-secondary">3</td>
+                <td class="fw-semibold">Carla Fernandez</td>
+                <td class="text-secondary">carla.fernandez@mail.com</td>
+                <td class="text-secondary">381 555 5566</td>
+                <td class="text-secondary">Tafi Viejo</td>
+                <td class="text-secondary">02/08/2026</td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary" href="mailto:carla.fernandez@mail.com" aria-label="Enviar email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <a class="btn btn-sm btn-outline-success" href="https://wa.me/5493815555566" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
                 </td>
               </tr>
 
               <tr>
-                <td>4</td>
-                <td>Julieta Ríos</td>
-                <td>julieta.rios@mail.com</td>
-                <td>381 555 7788</td>
-                <td>San Miguel de Tucumán</td>
-                <td>28/07/2026</td>
-                <td>
-                  <div class="acciones">
-                    <a class="link-accion" href="mailto:julieta.rios@mail.com"
-                      >Email</a
-                    >
-                    <a class="link-accion" href="https://wa.me/5493815557788"
-                      >WhatsApp</a
-                    >
-                  </div>
+                <td class="text-secondary">4</td>
+                <td class="fw-semibold">Julieta Rios</td>
+                <td class="text-secondary">julieta.rios@mail.com</td>
+                <td class="text-secondary">381 555 7788</td>
+                <td class="text-secondary">San Miguel de Tucuman</td>
+                <td class="text-secondary">28/07/2026</td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary" href="mailto:julieta.rios@mail.com" aria-label="Enviar email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <a class="btn btn-sm btn-outline-success" href="https://wa.me/5493815557788" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
                 </td>
               </tr>
 
               <tr>
-                <td>5</td>
-                <td>Ana Paula Suárez</td>
-                <td>anapaula.suarez@mail.com</td>
-                <td>381 555 9900</td>
-                <td>Banda del Río Salí</td>
-                <td>21/07/2026</td>
-                <td>
-                  <div class="acciones">
-                    <a
-                      class="link-accion"
-                      href="mailto:anapaula.suarez@mail.com"
-                      >Email</a
-                    >
-                    <a class="link-accion" href="https://wa.me/5493815559900"
-                      >WhatsApp</a
-                    >
-                  </div>
+                <td class="text-secondary">5</td>
+                <td class="fw-semibold">Ana Paula Suarez</td>
+                <td class="text-secondary">anapaula.suarez@mail.com</td>
+                <td class="text-secondary">381 555 9900</td>
+                <td class="text-secondary">Banda del Rio Sali</td>
+                <td class="text-secondary">21/07/2026</td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary" href="mailto:anapaula.suarez@mail.com" aria-label="Enviar email">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <a class="btn btn-sm btn-outline-success" href="https://wa.me/5493815559900" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
                 </td>
               </tr>
+
             </tbody>
           </table>
         </div>
+      </div>
 
-        <p class="pie-tabla">Mostrando 5 clientes</p>
-      </main>
-    </div>
-  </body>
+      <p class="text-secondary small mt-3 mb-0">Mostrando 5 clientes</p>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
