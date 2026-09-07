@@ -1,238 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/catalogo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Catalogo | Claudette</title>
+  <meta name="description"
+    content="Descubri la coleccion de indumentaria femenina de Claudette: vestidos, remeras, pantalones, abrigos y accesorios.">
+  <meta name="keywords" content="catalogo, ropa mujer, vestidos, remeras, pantalones, abrigos, Claudette, Tucuman">
+  <meta property="og:title" content="Catalogo | Claudette">
+  <meta property="og:description" content="Descubri nuestra coleccion de indumentaria femenina.">
+  <meta property="og:image" content="img/ui/logo.jpeg">
+  <meta property="og:type" content="website">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/catalogo.css">
 </head>
+
 <body>
-     <header>
 
-        <header class="header">
-            <a class="logo" href="index.html">
-                <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa">
-            </a>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
+
+      <a class="navbar-brand p-0" href="index.html">
+        <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" height="52" class="rounded-3">
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="https://wa.me/5493815551234" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">
+          <i class="bi bi-whatsapp me-1"></i>Escribinos
+        </a>
+      </div>
 
-            <nav class="nav-principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    </header>
-
-
-    <main id="inicio">
-
-        <h2>Catálogo</h2>
-
-        <p>
-            Descubrí nuestra colección de indumentaria femenina.
-        </p>
-
-
-
-
-        <section id="categorias">
-
-            <details>
-
-                <summary>
-                    <strong>Categorías de ropa</strong>
-                </summary>
-
-                <ul>
-
-                    <li>
-                        <a href="producto.html">
-                            Remeras
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="producto.html">
-                            Vestidos
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="producto.html">
-                            Pantalones
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="producto.html">
-                            Abrigos
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="producto.html">
-                            Calzado
-                        </a>
-                    </li>
-
-                </ul>
-
-            </details>
-
-        </section>
-
-        <hr>
-
-
-
-
-        <section id="catalogo">
-
-            <h2>Productos destacados</h2>
-
-
-            <article>
-
-                <h3>Vestido Floral</h3>
-
-                <p>
-                    Vestido floral de temporada, ideal para ocasiones especiales.
-                </p>
-
-                <p>
-                    Precio: <strong>$45.900</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-            <br>
-
-
-            <article>
-
-                <h3>Blusa Elegance</h3>
-
-                <p>
-                    Blusa elegante y cómoda para combinar con diferentes prendas.
-                </p>
-
-                <p>
-                    Precio: <strong>$32.500</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-            <br>
-
-
-            <article>
-
-                <h3>Jean Classic</h3>
-
-                <p>
-                    Jean clásico de corte moderno y cómodo.
-                </p>
-
-                <p>
-                    Precio: <strong>$52.900</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-            <br>
-
-
-            <article>
-
-                <h3>Campera Urbana</h3>
-
-                <p>
-                    Campera urbana para los días fríos.
-                </p>
-
-                <p>
-                    Precio: <strong>$78.900</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-            <br>
-
-
-            <article>
-
-                <h3>Top Básico</h3>
-
-                <p>
-                    Top básico y versátil para cualquier ocasión.
-                </p>
-
-                <p>
-                    Precio: <strong>$19.900</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-            <br>
-
-
-            <article>
-
-                <h3>Abrigo Soft</h3>
-
-                <p>
-                    Abrigo cómodo y moderno para la temporada de invierno.
-                </p>
-
-                <p>
-                    Precio: <strong>$89.900</strong>
-                </p>
-
-                <button>
-                    Agregar al carrito
-                </button>
-
-            </article>
-
-        </section>
-
-    </main>
-
-
-    <hr>
-
-    <footer class="footer" id="contactos">
-    <div class="footer-redes">
-      <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
-      <a href="https://wa.me/5493815551234">WhatsApp</a>
     </div>
+  </nav>
 
-    <p class="footer-copy">Claudette - Todos los derechos reservados</p>
 
-    <a class="link-admin" href="admin/login.html">Administracion</a>
+  <header class="bg-beige py-5">
+    <div class="container text-center">
+      <h1 class="titulo display-5 fw-bold text-bordo mb-2">Catalogo</h1>
+      <p class="lead text-secondary mb-0">Descubri nuestra coleccion de indumentaria femenina.</p>
+    </div>
+  </header>
+
+
+  <main class="container py-5">
+    <section class="mb-5">
+      <div class="accordion" id="acordeonCategorias">
+        <div class="accordion-item border rounded-3 overflow-hidden">
+
+          <h2 class="accordion-header" id="encabezadoCategorias">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#listaCategorias" aria-expanded="false" aria-controls="listaCategorias">
+              <i class="bi bi-tags me-2"></i>Categorias de ropa
+            </button>
+          </h2>
+
+          <div id="listaCategorias" class="accordion-collapse collapse" aria-labelledby="encabezadoCategorias"
+            data-bs-parent="#acordeonCategorias">
+            <div class="accordion-body">
+
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
+                <div class="col">
+                  <a class="btn btn-outline-primary w-100" href="producto.html">Remeras</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-outline-primary w-100" href="producto.html">Vestidos</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-outline-primary w-100" href="producto.html">Pantalones</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-outline-primary w-100" href="producto.html">Abrigos</a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-outline-primary w-100" href="producto.html">Calzado</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="text-center mb-4">
+        <h2 class="titulo fw-bold text-bordo mb-1">Productos destacados</h2>
+        <p class="text-secondary mb-0">Mostrando 6 productos</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/ui/claudete-vestido.jpg" class="card-img-top object-fit-cover" alt="Vestido Floral">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Vestido Floral</h3>
+              <p class="text-secondary small flex-grow-1">
+                Vestido floral de temporada, ideal para ocasiones especiales.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$45.900</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/productos/Remera.jpeg" class="card-img-top object-fit-cover" alt="Blusa Elegance">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Blusa Elegance</h3>
+              <p class="text-secondary small flex-grow-1">
+                Blusa elegante y comoda para combinar con diferentes prendas.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$32.500</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/productos/Pantalon.jpeg" class="card-img-top object-fit-cover" alt="Jean Classic">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Jean Classic</h3>
+              <p class="text-secondary small flex-grow-1">
+                Jean clasico de corte moderno y comodo.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$52.900</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/ui/campera-jean-claudette.jpg" class="card-img-top object-fit-cover" alt="Campera Urbana">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Campera Urbana</h3>
+              <p class="text-secondary small flex-grow-1">
+                Campera urbana para los dias frios.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$78.900</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/productos/images.jpg" class="card-img-top object-fit-cover" alt="Top Basico">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Top Basico</h3>
+              <p class="text-secondary small flex-grow-1">
+                Top basico y versatil para cualquier ocasion.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$19.900</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img src="img/productos/abrigo.jpeg" class="card-img-top object-fit-cover" alt="Abrigo Soft">
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="h5 fw-semibold text-bordo mb-2">Abrigo Soft</h3>
+              <p class="text-secondary small flex-grow-1">
+                Abrigo comodo y moderno para la temporada de invierno.
+              </p>
+              <p class="fs-5 fw-bold text-bordo mb-3">$89.900</p>
+              <button class="btn btn-primary w-100 mt-auto" type="button">
+                <i class="bi bi-bag-plus me-1"></i>Agregar al carrito
+              </button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  
+  <footer class="bg-marron text-white pt-5 pb-4" id="contactos">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-md-5">
+          <h4 class="titulo h4 mb-2">Claudette</h4>
+          <p class="small text-white-50 mb-0">
+            Ropa y accesorios de mujer.<br>San Miguel de Tucuman, Argentina.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Navegacion</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="link-footer" href="index.html">Inicio</a></li>
+            <li><a class="link-footer" href="catalogo.html">Catalogo</a></li>
+            <li><a class="link-footer" href="nosotros.html">Nosotros</a></li>
+            <li><a class="link-footer" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Seguinos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a class="link-footer" href="https://www.instagram.com/claudette.r.h" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="link-footer" href="https://wa.me/5493815551234" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="link-footer" href="mailto:hola@claudette.com" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="small text-white-50 mb-0">Claudette - Todos los derechos reservados</p>
+        <a class="link-footer small" href="admin/login.html">Administracion</a>
+      </div>
+
+    </div>
   </footer>
-    
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
