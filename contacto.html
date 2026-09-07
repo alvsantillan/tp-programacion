@@ -4,119 +4,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contacto | Claudette</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description"
+    content="Escribinos por WhatsApp, Instagram o mail. Consultas por productos, talles, envios y cambios.">
+  <meta name="keywords" content="contacto Claudette, WhatsApp, Instagram, ropa mujer Tucuman">
+  <meta property="og:title" content="Contacto | Claudette">
+  <meta property="og:description" content="Escribinos y te respondemos a la brevedad.">
+  <meta property="og:image" content="img/ui/logo.jpeg">
+  <meta property="og:type" content="website">
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
 
-  <header class="header">
-    <a class="logo" href="index.html">
-      <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa">
-    </a>
+      <a class="navbar-brand p-0" href="index.html">
+        <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" height="52" class="rounded-3">
+      </a>
 
-    <nav class="nav-principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catalogo</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="https://wa.me/5493815551234" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">
+          <i class="bi bi-whatsapp me-1"></i>Escribinos
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <header class="bg-beige py-5">
+    <div class="container text-center">
+      <h1 class="titulo display-5 fw-bold text-bordo mb-2">Contacto</h1>
+      <p class="lead text-secondary mb-0">Escribinos y te respondemos a la brevedad.</p>
+    </div>
   </header>
 
 
-  <main class="main-contacto">
+  <main class="container py-5">
 
-    <section class="intro-contacto">
-      <h1>Contacto</h1>
-      <p>Escribinos y te respondemos a la brevedad.</p>
-    </section>
+    
+    <div class="row g-4 align-items-start">
 
-    <section class="contenido-contacto">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4 p-md-5">
 
-      <!-- Columna 1: formulario -->
-      <form class="form-contacto" action="#" method="post">
-        <h2>Envianos tu consulta</h2>
+            <h2 class="titulo h3 fw-bold text-bordo mb-4">Envianos tu consulta</h2>
 
-        <div class="campo">
-          <label for="nombre">Nombre y apellido</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-        </div>
+            <form action="#" method="post">
 
-        <div class="campo-doble">
-          <div class="campo">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tunombre@mail.com" required>
+              <div class="row g-3">
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold" for="nombre">Nombre y apellido</label>
+                  <input class="form-control form-control-lg" type="text" id="nombre" name="nombre"
+                    placeholder="Tu nombre" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold" for="email">Email</label>
+                  <input class="form-control form-control-lg" type="email" id="email" name="email"
+                    placeholder="tunombre@mail.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold" for="telefono">Telefono / WhatsApp</label>
+                  <input class="form-control form-control-lg" type="tel" id="telefono" name="telefono"
+                    placeholder="381 555 1234">
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold" for="motivo">Motivo de la consulta</label>
+                  <select class="form-select form-select-lg" id="motivo" name="motivo" required>
+                    <option value="">Elegi una opcion</option>
+                    <option value="producto">Consulta por un producto</option>
+                    <option value="talles">Talles y disponibilidad</option>
+                    <option value="envios">Envios</option>
+                    <option value="cambios">Cambios y devoluciones</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold" for="mensaje">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="6"
+                    placeholder="Contanos en que podemos ayudarte" required></textarea>
+                </div>
+
+                <div class="col-12 d-grid d-sm-block">
+                  <button class="btn btn-primary btn-lg px-4" type="submit">
+                    <i class="bi bi-send me-1"></i>Enviar consulta
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+
           </div>
+        </div>
+      </div>
 
-          <div class="campo">
-            <label for="telefono">Telefono / WhatsApp</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="381 555 1234">
+
+   
+      <aside class="col-lg-4">
+        <div class="card border-0 rounded-4 bg-rosa-claro h-100">
+          <div class="card-body p-4">
+
+            <h2 class="titulo h4 fw-bold text-bordo mb-4">Otros medios</h2>
+
+            <ul class="list-unstyled d-flex flex-column gap-4 mb-4">
+
+              <li class="d-flex gap-3">
+                <i class="bi bi-whatsapp fs-4 text-bordo"></i>
+                <div>
+                  <h3 class="h6 fw-semibold text-bordo mb-1">WhatsApp</h3>
+                  <a class="text-secondary text-decoration-none" href="https://wa.me/5493815551234">
+                    +54 9 381 555-1234
+                  </a>
+                </div>
+              </li>
+
+              <li class="d-flex gap-3">
+                <i class="bi bi-instagram fs-4 text-bordo"></i>
+                <div>
+                  <h3 class="h6 fw-semibold text-bordo mb-1">Instagram</h3>
+                  <a class="text-secondary text-decoration-none" href="https://www.instagram.com/claudette.r.h">
+                    @claudette.r.h
+                  </a>
+                </div>
+              </li>
+
+              <li class="d-flex gap-3">
+                <i class="bi bi-envelope fs-4 text-bordo"></i>
+                <div>
+                  <h3 class="h6 fw-semibold text-bordo mb-1">Email</h3>
+                  <a class="text-secondary text-decoration-none" href="mailto:hola@claudette.com">
+                    hola@claudette.com
+                  </a>
+                </div>
+              </li>
+
+              <li class="d-flex gap-3">
+                <i class="bi bi-clock fs-4 text-bordo"></i>
+                <div>
+                  <h3 class="h6 fw-semibold text-bordo mb-1">Horarios</h3>
+                  <p class="text-secondary mb-0">
+                    Lunes a viernes de 9 a 18 h<br>Sabados de 9 a 13 h
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+
+            <a class="btn btn-primary w-100" href="https://wa.me/5493815551234">
+              <i class="bi bi-whatsapp me-1"></i>Escribinos por WhatsApp
+            </a>
+
           </div>
         </div>
-
-        <div class="campo">
-          <label for="motivo">Motivo de la consulta</label>
-          <select id="motivo" name="motivo" required>
-            <option value="">Elegi una opcion</option>
-            <option value="producto">Consulta por un producto</option>
-            <option value="talles">Talles y disponibilidad</option>
-            <option value="envios">Envios</option>
-            <option value="cambios">Cambios y devoluciones</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-
-        <div class="campo">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contanos en que podemos ayudarte"
-            required></textarea>
-        </div>
-
-        <button class="boton-primario" type="submit">Enviar consulta</button>
-      </form>
-
-
-      <aside class="datos-contacto">
-        <h2>Otros medios</h2>
-
-        <ul class="lista-datos">
-          <li>
-            <h3>WhatsApp</h3>
-            <a href="https://wa.me/5493815551234">+54 9 381 555-1234</a>
-          </li>
-          <li>
-            <h3>Instagram</h3>
-            <a href="https://www.instagram.com/claudette.r.h">@claudette.r.h</a>
-          </li>
-          <li>
-            <h3>Email</h3>
-            <a href="mailto:hola@claudette.com">hola@claudette.com</a>
-          </li>
-          <li>
-            <h3>Horarios</h3>
-            <p>Lunes a viernes de 9 a 18 h<br>Sabados de 9 a 13 h</p>
-          </li>
-        </ul>
-
-        <a class="boton-primario" href="https://wa.me/5493815551234">Escribinos por WhatsApp</a>
       </aside>
 
-    </section>
+    </div>
 
   </main>
 
-  <footer class="footer" id="contactos">
-    <div class="footer-redes">
-      <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
-      <a href="https://wa.me/5493815551234">WhatsApp</a>
+  <footer class="bg-marron text-white pt-5 pb-4" id="contactos">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-md-5">
+          <h4 class="titulo h4 mb-2">Claudette</h4>
+          <p class="small text-white-50 mb-0">
+            Ropa y accesorios de mujer.<br>San Miguel de Tucuman, Argentina.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Navegacion</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="link-footer" href="index.html">Inicio</a></li>
+            <li><a class="link-footer" href="catalogo.html">Catalogo</a></li>
+            <li><a class="link-footer" href="nosotros.html">Nosotros</a></li>
+            <li><a class="link-footer" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Seguinos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a class="link-footer" href="https://www.instagram.com/claudette.r.h" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="link-footer" href="https://wa.me/5493815551234" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="link-footer" href="mailto:hola@claudette.com" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="small text-white-50 mb-0">Claudette - Todos los derechos reservados</p>
+        <a class="link-footer small" href="admin/login.html">Administracion</a>
+      </div>
+
     </div>
-
-    <p class="footer-copy">Claudette - Todos los derechos reservados</p>
-
-    <a class="link-admin" href="admin/login.html">Administracion</a>
   </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

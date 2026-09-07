@@ -4,185 +4,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tienda de ropa y accesorios de mujer en San Miguel de Tucuma. Escribinos por WhatsApp o Instagram.">
-  <title>Claudette | Ropa y accesorios</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
 
+  <title>Claudette | Ropa y accesorios de mujer</title>
+  <meta name="description"
+    content="Tienda de ropa y accesorios de mujer en San Miguel de Tucuman. Escribinos por WhatsApp o Instagram.">
+  <meta name="keywords" content="ropa mujer, vestidos, remeras, accesorios, Claudette, Tucuman, indumentaria femenina">
+  <meta property="og:title" content="Claudette | Ropa y accesorios">
+  <meta property="og:description" content="Prendas simples, comodas y con onda para el dia a dia.">
+  <meta property="og:image" content="img/ui/logo.jpeg">
+  <meta property="og:type" content="website">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
 
 <body>
 
-  <!-- ===== HEADER (recuerden que debe ser igual en todos) ===== -->
-  <header class="header">
-    <a class="logo" href="index.html">
-      <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa">
-    </a>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
 
-    <nav class="nav-principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catalogo</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+      <a class="navbar-brand p-0" href="index.html">
+        <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" height="52" class="rounded-3">
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="https://wa.me/5493815551234" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">
+          <i class="bi bi-whatsapp me-1"></i>Escribinos
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <header class="bg-beige">
+    <div class="container py-4 py-lg-5">
+      <div class="row g-0 align-items-stretch bg-white rounded-4 overflow-hidden shadow-sm">
+
+        <div class="col-lg-6">
+          <img src="img/productos/Imagen.jpeg" class="w-100 h-100 object-fit-cover hero-img"
+            alt="Coleccion Claudette">
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center p-4 p-md-5 text-center text-lg-start">
+          <p class="text-uppercase small fw-semibold text-rosa ls-1 mb-2">Nueva temporada</p>
+          <h1 class="titulo display-3 fw-bold text-bordo mb-3">Claudette</h1>
+          <p class="lead text-secondary mb-4">
+            Ropa y accesorios de mujer. Prendas simples, comodas y con onda para el dia a dia.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
+            <a class="btn btn-primary btn-lg px-4" href="catalogo.html">Ver catalogo</a>
+            <a class="btn btn-outline-primary btn-lg px-4" href="nosotros.html">Conocer la marca</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </header>
 
-  <!-- ===== CONTENIDO ===== -->
-  <main class="main-home">
 
-    <!-- Hero -->
-    <section class="hero">
-      <img class="hero-imagen" src="img/productos/images.jpg" alt="Coleccion Claudette">
+  <main>
 
-      <div class="hero-texto">
-        <h1>Claudette</h1>
-        <p>Ropa y accesorios de mujer</p>
-        <a class="boton-primario" href="catalogo.html">Ver catalogo</a>
+ 
+    <section class="container py-5">
+
+      <div class="text-center mb-5">
+        <h2 class="titulo fw-bold text-bordo">Categorias</h2>
+        <p class="text-secondary mb-0">Encontra lo que buscas mas rapido</p>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+
+        <div class="col">
+          <a class="categoria d-block text-center text-decoration-none" href="catalogo.html?categoria=remeras">
+            <img src="img/productos/Remera.jpeg" class="img-categoria rounded-circle object-fit-cover mx-auto"
+              alt="Remeras">
+            <span class="d-block mt-3 fw-semibold text-bordo">Remeras</span>
+          </a>
+        </div>
+
+        <div class="col">
+          <a class="categoria d-block text-center text-decoration-none" href="catalogo.html?categoria=pantalones">
+            <img src="img/productos/Pantalon.jpeg" class="img-categoria rounded-circle object-fit-cover mx-auto"
+              alt="Pantalones">
+            <span class="d-block mt-3 fw-semibold text-bordo">Pantalones</span>
+          </a>
+        </div>
+
+        <div class="col">
+          <a class="categoria d-block text-center text-decoration-none" href="catalogo.html?categoria=vestidos">
+            <img src="img/productos/Vestido.jpeg" class="img-categoria rounded-circle object-fit-cover mx-auto"
+              alt="Vestidos">
+            <span class="d-block mt-3 fw-semibold text-bordo">Vestidos</span>
+          </a>
+        </div>
+
+        <div class="col">
+          <a class="categoria d-block text-center text-decoration-none" href="catalogo.html?categoria=abrigos">
+            <img src="img/productos/abrigo.jpeg" class="img-categoria rounded-circle object-fit-cover mx-auto"
+              alt="Abrigos">
+            <span class="d-block mt-3 fw-semibold text-bordo">Abrigos</span>
+          </a>
+        </div>
+
+        <div class="col">
+          <a class="categoria d-block text-center text-decoration-none" href="catalogo.html?categoria=accesorios">
+            <img src="img/productos/accesorio" class="img-categoria rounded-circle object-fit-cover mx-auto"
+              alt="Accesorios">
+            <span class="d-block mt-3 fw-semibold text-bordo">Accesorios</span>
+          </a>
+        </div>
+
       </div>
     </section>
 
 
-    <section class="categorias">
-      <h2>Categorias</h2>
+    <section class="bg-beige py-5">
+      <div class="container">
 
-      <ul class="lista-categorias">
-        <li>
-          <a href="catalogo.html?categoria=remeras">
-            <img src="img/ui/cat-remeras.jpg" alt="">
-            <span>Remeras</span>
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+          <div>
+            <h2 class="titulo fw-bold text-bordo mb-1">Destacados</h2>
+            <p class="text-secondary mb-0">Lo mas elegido de la temporada</p>
+          </div>
+          <a class="link-ver fw-semibold text-decoration-none" href="catalogo.html">
+            Ver todo el catalogo <i class="bi bi-arrow-right"></i>
           </a>
-        </li>
-        <li>
-          <a href="catalogo.html?categoria=pantalones">
-            <img src="img/ui/cat-pantalones.jpg" alt="">
-            <span>Pantalones</span>
-          </a>
-        </li>
-        <li>
-          <a href="catalogo.html?categoria=vestidos">
-            <img src="img/ui/cat-vestidos.jpg" alt="">
-            <span>Vestidos</span>
-          </a>
-        </li>
-        <li>
-          <a href="catalogo.html?categoria=abrigos">
-            <img src="img/ui/cat-abrigos.jpg" alt="">
-            <span>Abrigos</span>
-          </a>
-        </li>
-        <li>
-          <a href="catalogo.html?categoria=accesorios">
-            <img src="img/ui/cat-accesorios.jpg" alt="">
-            <span>Accesorios</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+        </div>
 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
 
-    <section class="destacados">
-      <h2>Destacados</h2>
+          <div class="col">
+            <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="1">
+              <a href="producto.html?id=1">
+                <img src="img/ui/claudete-vestido.jpg" class="card-img-top object-fit-cover" alt="Vestido floreado">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h6 fw-semibold mb-1">
+                  <a class="text-reset text-decoration-none" href="producto.html?id=1">Vestido floreado</a>
+                </h3>
+                <p class="fs-5 fw-bold text-bordo mb-3">$45.000</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li><span class="badge rounded-pill text-bg-light border">S</span></li>
+                  <li><span class="badge rounded-pill text-bg-light border">M</span></li>
+                  <li><span class="badge rounded-pill text-bg-light border">L</span></li>
+                </ul>
+                <a class="btn btn-primary w-100 mt-auto" href="https://wa.me/5493815551234">
+                  <i class="bi bi-whatsapp me-1"></i>Consultar
+                </a>
+              </div>
+            </article>
+          </div>
 
-      <div class="grilla-productos">
+          <div class="col">
+            <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="2">
+              <a href="producto.html?id=2">
+                <img src="img/ui/campera-jean-claudette.jpg" class="card-img-top object-fit-cover"
+                  alt="Campera de jean">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h6 fw-semibold mb-1">
+                  <a class="text-reset text-decoration-none" href="producto.html?id=2">Campera de jean</a>
+                </h3>
+                <p class="fs-5 fw-bold text-bordo mb-3">$62.000</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li><span class="badge rounded-pill text-bg-light border">M</span></li>
+                  <li><span class="badge rounded-pill text-bg-light border">L</span></li>
+                </ul>
+                <a class="btn btn-primary w-100 mt-auto" href="https://wa.me/5493815551234">
+                  <i class="bi bi-whatsapp me-1"></i>Consultar
+                </a>
+              </div>
+            </article>
+          </div>
 
+          <div class="col">
+            <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="3">
+              <a href="producto.html?id=3">
+                <img src="img/ui/collarPlateado.jpg" class="card-img-top object-fit-cover" alt="Collar plateado">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h6 fw-semibold mb-1">
+                  <a class="text-reset text-decoration-none" href="producto.html?id=3">Collar plateado</a>
+                </h3>
+                <p class="fs-5 fw-bold text-bordo mb-3">$12.000</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li><span class="badge rounded-pill text-bg-light border">Unico</span></li>
+                </ul>
+                <a class="btn btn-primary w-100 mt-auto" href="https://wa.me/5493815551234">
+                  <i class="bi bi-whatsapp me-1"></i>Consultar
+                </a>
+              </div>
+            </article>
+          </div>
 
-        <article class="card-producto" data-id="1">
-          <a href="producto.html?id=1">
-            <img src="img/ui/claudete-vestido.jpg" alt="Vestido floreado">
-            <h3>Vestido floreado</h3>
-          </a>
-          <p class="precio">$45.000</p>
-          <ul class="talles">
-            <li>S</li>
-            <li>M</li>
-            <li>L</li>
-          </ul>
-          <a class="boton-consultar" href="https://wa.me/5493815551234">Consultar</a>
-        </article>
+          <div class="col">
+            <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="4">
+              <a href="producto.html?id=4">
+                <img src="img/ui/pantalonLino-claudette.jpg" class="card-img-top object-fit-cover"
+                  alt="Pantalon de lino">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h6 fw-semibold mb-1">
+                  <a class="text-reset text-decoration-none" href="producto.html?id=4">Pantalon de lino</a>
+                </h3>
+                <p class="fs-5 fw-bold text-bordo mb-3">$38.000</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-3">
+                  <li><span class="badge rounded-pill text-bg-light border">S</span></li>
+                  <li><span class="badge rounded-pill text-bg-light border">M</span></li>
+                </ul>
+                <a class="btn btn-primary w-100 mt-auto" href="https://wa.me/5493815551234">
+                  <i class="bi bi-whatsapp me-1"></i>Consultar
+                </a>
+              </div>
+            </article>
+          </div>
 
-        <article class="card-producto" data-id="2">
-          <a href="producto.html?id=2">
-            <img src="img/ui/campera-jean-claudette.jpg" alt="Campera de jean">
-            <h3>Campera de jean</h3>
-          </a>
-          <p class="precio">$62.000</p>
-          <ul class="talles">
-            <li>M</li>
-            <li>L</li>
-          </ul>
-          <a class="boton-consultar" href="https://wa.me/5493815551234">Consultar</a>
-        </article>
-
-        <article class="card-producto" data-id="3">
-          <a href="producto.html?id=3">
-            <img src="img/ui/collarPlateado.jpg" alt="Collar plateado">
-            <h3>Collar plateado</h3>
-          </a>
-          <p class="precio">$12.000</p>
-          <ul class="talles">
-            <li>Unico</li>
-          </ul>
-          <a class="boton-consultar" href="https://wa.me/5493815551234">Consultar</a>
-        </article>
-
-        <article class="card-producto" data-id="4">
-          <a href="producto.html?id=4">
-            <img src="img/ui/pantalonLino-claudette.jpg" alt="Pantalon de lino">
-            <h3>Pantalon de lino</h3>
-          </a>
-          <p class="precio">$38.000</p>
-          <ul class="talles">
-            <li>S</li>
-            <li>M</li>
-          </ul>
-          <a class="boton-consultar" href="https://wa.me/5493815551234">Consultar</a>
-        </article>
-
+        </div>
       </div>
-
-      <a class="link-ver-mas" href="catalogo.html">Ver todo el catalogo</a>
     </section>
 
 
-    <section class="sobre-marca">
-      <h2>Sobre nosotras</h2>
-      <p>Somos una marca pensada para vos: prendas simples, cómodas y con onda para el día a día. Elegimos cada pieza con cuidado para que te sientas bien, sin vueltas.</p>
-      <a class="link-ver-mas" href="nosotros.html">Conocer mas</a>
+    <section class="container py-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="titulo fw-bold text-bordo mb-3">Sobre nosotras</h2>
+          <p class="text-secondary fs-5 mb-4">
+            Somos una marca pensada para vos: prendas simples, comodas y con onda para el dia a dia.
+            Elegimos cada pieza con cuidado para que te sientas bien, sin vueltas.
+          </p>
+          <a class="btn btn-outline-primary px-4" href="nosotros.html">Conocer mas</a>
+        </div>
+      </div>
     </section>
 
 
-    <section class="info-compra">
-      <ul>
-        <li>
-          <h3>Envios</h3>
-          <p>A todo el pais</p>
-        </li>
-        <li>
-          <h3>Cambios</h3>
-          <p>Dentro de los 30 dias</p>
-        </li>
-        <li>
-          <h3>Atencion</h3>
-          <p>Por WhatsApp e Instagram</p>
-        </li>
-      </ul>
+    <section class="bg-rosa-claro py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+
+          <div class="col">
+            <div class="p-3">
+              <i class="bi bi-truck fs-1 text-bordo"></i>
+              <h3 class="h5 fw-semibold text-bordo mt-3 mb-1">Envios</h3>
+              <p class="text-secondary mb-0">A todo el pais</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="p-3">
+              <i class="bi bi-arrow-repeat fs-1 text-bordo"></i>
+              <h3 class="h5 fw-semibold text-bordo mt-3 mb-1">Cambios</h3>
+              <p class="text-secondary mb-0">Dentro de los 30 dias</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="p-3">
+              <i class="bi bi-chat-dots fs-1 text-bordo"></i>
+              <h3 class="h5 fw-semibold text-bordo mt-3 mb-1">Atencion</h3>
+              <p class="text-secondary mb-0">Por WhatsApp e Instagram</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer class="footer" id="contactos">
-    <div class="footer-redes">
-      <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
-      <a href="https://wa.me/5493815551234">WhatsApp</a>
+
+  <footer class="bg-marron text-white pt-5 pb-4" id="contactos">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-md-5">
+          <h4 class="titulo h4 mb-2">Claudette</h4>
+          <p class="small text-white-50 mb-0">
+            Ropa y accesorios de mujer.<br>San Miguel de Tucuman, Argentina.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Navegacion</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="link-footer" href="index.html">Inicio</a></li>
+            <li><a class="link-footer" href="catalogo.html">Catalogo</a></li>
+            <li><a class="link-footer" href="nosotros.html">Nosotros</a></li>
+            <li><a class="link-footer" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Seguinos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a class="link-footer" href="https://www.instagram.com/claudette.r.h" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="link-footer" href="https://wa.me/5493815551234" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="link-footer" href="mailto:hola@claudette.com" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="small text-white-50 mb-0">Claudette - Todos los derechos reservados</p>
+        <a class="link-footer small" href="admin/login.html">Administracion</a>
+      </div>
+
     </div>
-
-    <p class="footer-copy">Claudette - Todos los derechos reservados</p>
-
-    <a class="link-admin" href="admin/login.html">Administracion</a>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
