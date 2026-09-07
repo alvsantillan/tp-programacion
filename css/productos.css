@@ -1,25 +1,3 @@
-/* ============================================================
-   CLAUDETE - PRODUCTOS (Detalle de producto)
-   TP3 - Refactorización con Bootstrap
-   Rama: refactor/productos
-   ============================================================
-
-   Este archivo es EXCLUSIVO de la sección "productos", tal como
-   quedamos en el grupo (un archivo de CSS por integrante/rama).
-
-   NOTA: las variables de color (--bordo, --rosa, etc.) siguen
-   definidas en css/style.css, que también está linkeado en el
-   HTML, así que acá se pueden seguir usando sin problema.
-*/
-
-
-/* ------------------------------------------------------------
-   CSS ORIGINAL DEL TP2 (COMENTADO, NO ELIMINADO)
-   Se conserva como respaldo del trabajo anterior, tal como pide
-   la consigna. Ya no se usa: fue reemplazado por clases de
-   Bootstrap directamente en el HTML (grid, btn, btn-check, etc.)
------------------------------------------------------------- */
-
 /*
 .breadcrumb {
     color: var(--gris);
@@ -141,51 +119,3 @@
     }
 }
 */
-
-
-/* ------------------------------------------------------------
-   CSS NUEVO - ajustes sobre Bootstrap
-   Bootstrap ya resuelve el grid, el responsive y los espacios.
-   Acá solo lo mínimo para mantener la identidad visual de la
-   marca (colores, tipografía de precio, botón de WhatsApp).
------------------------------------------------------------- */
-
-.precio {
-    color: var(--bordo);
-}
-
-/* Botón "Consultar por WhatsApp" con los colores de la marca */
-.btn-consultar {
-    background-color: var(--bordo);
-    color: var(--blanco);
-    border: none;
-}
-
-.btn-consultar:hover,
-.btn-consultar:focus {
-    background-color: var(--rosa);
-    color: var(--blanco);
-}
-
-/* Selector de talles usando btn-check de Bootstrap */
-.selector-talles .btn-outline-secondary {
-    color: var(--marron);
-    border-color: var(--borde);
-}
-
-.selector-talles .btn-check:checked + .btn-outline-secondary {
-    background-color: var(--bordo);
-    border-color: var(--bordo);
-    color: var(--blanco);
-}
-
-/* Miniaturas de la galería */
-.galeria-miniaturas img {
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.galeria-miniaturas img:hover {
-    opacity: 0.75;
-}
