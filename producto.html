@@ -1,107 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Claudette | Detalle de producto</title>
-        <meta
-            name="description"
-            content="Vestido floreado de tela liviana, corte suelto. Talles S, M, L. Envíos a todo el país - Claudette."
-        />
-        <meta
-            name="keywords"
-            content="ropa mujer, vestidos, remeras, tienda online, Claudette, Tucumán"
-        />
-        <meta property="og:title" content="Claudette | Vestido floreado" />
-        <meta
-            property="og:description"
-            content="Vestido floreado de tela liviana, corte suelto y mangas cortas."
-        />
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
 
-    <body>
-        <header class="header">
-            <a class="logo" href="index.html">
-                <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" />
-            </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <nav class="nav-principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="#contactos">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+  <title>Claudette | Detalle de producto</title>
+  <meta name="description"
+    content="Vestido floreado de tela liviana, corte suelto. Talles S, M, L. Envios a todo el pais - Claudette.">
+  <meta name="keywords" content="ropa mujer, vestidos, remeras, tienda online, Claudette, Tucuman">
+  <meta property="og:title" content="Claudette | Vestido floreado">
+  <meta property="og:description" content="Vestido floreado de tela liviana, corte suelto y mangas cortas.">
+  <meta property="og:image" content="img/ui/claudete-vestido.jpg">
+  <meta property="og:type" content="website">
 
-        <main>
-            <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="index.html">Inicio</a> / <a href="catalogo.html">Catalogo</a> /
-                <span>Vestido floreado</span>
-            </nav>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-            <section class="detalle-producto">
-                <div class="galeria-producto">
-                    <figure class="galeria-principal">
-                        <img src="img/productos/ejemplo.jpg" alt="Vestido floreado" />
-                    </figure>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
-                    <ul class="galeria-miniaturas">
-                        <li><img src="img/productos/ejemplo.jpg" alt="Vista frontal" /></li>
-                        <li><img src="img/productos/ejemplo.jpg" alt="Vista trasera" /></li>
-                        <li><img src="img/productos/ejemplo.jpg" alt="Detalle de tela" /></li>
-                    </ul>
-                </div>
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/productos.css">
+</head>
 
-                <div class="info-producto">
-                    <h1>Vestido floreado</h1>
-                    <p class="precio">$45.000</p>
-                    <p class="stock-disponible">En stock</p>
+<body>
 
-                    <fieldset class="selector-talles">
-                        <legend>Talle</legend>
-                        <ul class="talles">
-                            <li>
-                                <label><input type="radio" name="talle" value="S" /> S</label>
-                            </li>
-                            <li>
-                                <label><input type="radio" name="talle" value="M" /> M</label>
-                            </li>
-                            <li>
-                                <label><input type="radio" name="talle" value="L" /> L</label>
-                            </li>
-                        </ul>
-                    </fieldset>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
 
-                    <div class="selector-cantidad">
-                        <label for="cantidad">Cantidad</label>
-                        <input type="number" id="cantidad" name="cantidad" value="1" min="1" />
-                    </div>
+      <a class="navbar-brand p-0" href="index.html">
+        <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" height="52" class="rounded-3">
+      </a>
 
-                    <a class="boton-consultar" href="https://wa.me/5493815551234"
-                        >Consultar por WhatsApp</a
-                    >
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                    <div class="descripcion-producto">
-                        <h2>Descripcion</h2>
-                        <p>
-                            Vestido floreado de tela liviana, corte suelto y mangas cortas. Ideal
-                            para primavera y verano.
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
 
-        <footer class="footer" id="contactos">
-            <div class="footer-redes">
-                <a href="https://www.instagram.com/claudette.r.h">Instagram</a>
-                <a href="https://wa.me/5493815551234">WhatsApp</a>
+        <a href="https://wa.me/5493815551234" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">
+          <i class="bi bi-whatsapp me-1"></i>Escribinos
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <section class="container py-5">
+
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="catalogo.html">Catalogo</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Vestido floreado</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4 g-lg-5">
+
+        <div class="col-lg-6">
+          <img src="img/ui/claudete-vestido.jpg" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+            alt="Vestido floreado Claudette">
+        </div>
+
+        <div class="col-lg-6">
+          <h1 class="titulo fw-bold text-bordo mb-2">Vestido floreado</h1>
+          <p class="fs-3 fw-bold text-bordo mb-1">$45.000</p>
+          <p class="text-secondary small mb-4">En stock</p>
+
+          <fieldset class="mb-4">
+            <legend class="fw-semibold fs-6 mb-2">Talle</legend>
+            <div class="d-flex gap-2">
+              <input type="radio" class="btn-check" name="talle" id="talleS" value="S" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleS">S</label>
+
+              <input type="radio" class="btn-check" name="talle" id="talleM" value="M" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleM">M</label>
+
+              <input type="radio" class="btn-check" name="talle" id="talleL" value="L" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleL">L</label>
             </div>
+          </fieldset>
 
-            <p class="footer-copy">Claudette - Todos los derechos reservados</p>
-        </footer>
-    </body>
+          <div class="mb-4" style="max-width: 140px">
+            <label for="cantidad" class="form-label fw-semibold">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" value="1" min="1" class="form-control">
+          </div>
+
+          <a class="btn btn-primary btn-lg w-100 mb-4" href="https://wa.me/5493815551234">
+            <i class="bi bi-whatsapp me-1"></i>Consultar por WhatsApp
+          </a>
+
+          <div>
+            <h2 class="h5 fw-semibold mb-2">Descripcion</h2>
+            <p class="text-secondary mb-0">
+              Vestido floreado de tela liviana, corte suelto y mangas cortas. Ideal para primavera y verano.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-marron text-white pt-5 pb-4" id="contactos">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-md-5">
+          <h4 class="titulo h4 mb-2">Claudette</h4>
+          <p class="small text-white-50 mb-0">
+            Ropa y accesorios de mujer.<br>San Miguel de Tucuman, Argentina.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Navegacion</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="link-footer" href="index.html">Inicio</a></li>
+            <li><a class="link-footer" href="catalogo.html">Catalogo</a></li>
+            <li><a class="link-footer" href="nosotros.html">Nosotros</a></li>
+            <li><a class="link-footer" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Seguinos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a class="link-footer" href="https://www.instagram.com/claudette.r.h" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="link-footer" href="https://wa.me/5493815551234" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="link-footer" href="mailto:hola@claudette.com" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="small text-white-50 mb-0">Claudette - Todos los derechos reservados</p>
+        <a class="link-footer small" href="admin/login.html">Administracion</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
