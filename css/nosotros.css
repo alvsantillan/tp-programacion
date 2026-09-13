@@ -73,3 +73,19 @@
 .valores-marca .card-title {
     color: var(--bordo);
 }
+
+.btn-ver-mas {
+    color: var(--bordo);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-ver-mas:hover {
+    color: var(--rosa);
+}
+
+.card-text-extra {
+    font-size: 14px;
+    color: var(--gris);
+    margin-top: 10px;
+}
