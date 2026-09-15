@@ -1,39 +1,45 @@
-const productosPorCategoria = {
-  vestidos: {
-    nombre: "Vestido floreado",
-    precio: 45000,
+const productos = {
+  1: {
+    nombre: "Vestido Floral",
+    precio: 45900,
     imagen: "img/ui/claudete-vestido.jpg",
-    descripcion: "Vestido floreado de tela liviana, corte suelto y mangas cortas. Ideal para primavera y verano.",
+    descripcion: "Vestido floral de temporada, ideal para ocasiones especiales.",
   },
-  remeras: {
-    nombre: "Remera basica",
-    precio: 18500,
+  2: {
+    nombre: "Blusa Elegance",
+    precio: 32500,
     imagen: "img/productos/Remera.jpeg",
-    descripcion: "Remera de algodon suave, corte clasico. Combina con todo y es ideal para el uso diario.",
+    descripcion: "Blusa elegante y comoda para combinar con diferentes prendas.",
   },
-  pantalones: {
-    nombre: "Pantalon de lino",
-    precio: 38000,
+  3: {
+    nombre: "Jean Classic",
+    precio: 52900,
     imagen: "img/productos/Pantalon.jpeg",
-    descripcion: "Pantalon de lino fresco, corte recto y comodo. Perfecto para los dias de calor.",
+    descripcion: "Jean clasico de corte moderno y comodo.",
   },
-  abrigos: {
-    nombre: "Campera de jean",
-    precio: 62000,
+  4: {
+    nombre: "Campera Urbana",
+    precio: 78900,
     imagen: "img/ui/campera-jean-claudette.jpg",
-    descripcion: "Campera de jean clasica, ideal para las estaciones frescas del ano.",
+    descripcion: "Campera urbana para los dias frios.",
   },
-  calzado: {
-    nombre: "Sandalias de verano",
-    precio: 29000,
-    imagen: "img/productos/calzado.jpg",
-    descripcion: "Sandalias comodas y livianas, pensadas para el dia a dia en la temporada calida.",
+  5: {
+    nombre: "Top Basico",
+    precio: 19900,
+    imagen: "img/productos/images.jpg",
+    descripcion: "Top basico y versatil para cualquier ocasion.",
+  },
+  6: {
+    nombre: "Abrigo Soft",
+    precio: 89900,
+    imagen: "img/productos/abrigo.jpeg",
+    descripcion: "Abrigo comodo y moderno para la temporada de invierno.",
   },
 };
 
 const parametros = new URLSearchParams(window.location.search);
-const categoria = parametros.get("categoria");
-const producto = productosPorCategoria[categoria] || productosPorCategoria.vestidos;
+const idProducto = parametros.get("id");
+const producto = productos[idProducto] || productos[1];
 
 document.getElementById("nombreProducto").textContent = producto.nombre;
 document.getElementById("breadcrumbProducto").textContent = producto.nombre;
