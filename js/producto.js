@@ -1,6 +1,49 @@
+const productosPorCategoria = {
+  vestidos: {
+    nombre: "Vestido floreado",
+    precio: 45000,
+    imagen: "img/ui/claudete-vestido.jpg",
+    descripcion: "Vestido floreado de tela liviana, corte suelto y mangas cortas. Ideal para primavera y verano.",
+  },
+  remeras: {
+    nombre: "Remera basica",
+    precio: 18500,
+    imagen: "img/productos/Remera.jpeg",
+    descripcion: "Remera de algodon suave, corte clasico. Combina con todo y es ideal para el uso diario.",
+  },
+  pantalones: {
+    nombre: "Pantalon de lino",
+    precio: 38000,
+    imagen: "img/productos/Pantalon.jpeg",
+    descripcion: "Pantalon de lino fresco, corte recto y comodo. Perfecto para los dias de calor.",
+  },
+  abrigos: {
+    nombre: "Campera de jean",
+    precio: 62000,
+    imagen: "img/ui/campera-jean-claudette.jpg",
+    descripcion: "Campera de jean clasica, ideal para las estaciones frescas del ano.",
+  },
+  calzado: {
+    nombre: "Sandalias de verano",
+    precio: 29000,
+    imagen: "img/productos/calzado.jpg",
+    descripcion: "Sandalias comodas y livianas, pensadas para el dia a dia en la temporada calida.",
+  },
+};
+
+const parametros = new URLSearchParams(window.location.search);
+const categoria = parametros.get("categoria");
+const producto = productosPorCategoria[categoria] || productosPorCategoria.vestidos;
+
+document.getElementById("nombreProducto").textContent = producto.nombre;
+document.getElementById("breadcrumbProducto").textContent = producto.nombre;
+document.getElementById("descripcionProducto").textContent = producto.descripcion;
+document.getElementById("imagenProducto").src = producto.imagen;
+document.getElementById("imagenProducto").alt = producto.nombre;
+
 const contenedorProducto = document.querySelector("[data-precio-unitario]");
-const precioUnitario = Number(contenedorProducto.dataset.precioUnitario);
-const nombreProducto = document.querySelector("h1").textContent.trim();
+contenedorProducto.dataset.precioUnitario = producto.precio;
+document.getElementById("precioProducto").textContent = formatearPrecio(producto.precio);
 
 const inputCantidad = document.getElementById("cantidad");
 const btnMenos = document.getElementById("btnMenos");
@@ -11,11 +54,13 @@ const grupoTalles = document.getElementById("grupoTalles");
 const avisoTalle = document.getElementById("avisoTalle");
 const btnConsultar = document.getElementById("btnConsultar");
 
-const formatoPrecio = new Intl.NumberFormat("es-AR", {
-  style: "currency",
-  currency: "ARS",
-  minimumFractionDigits: 0,
-});
+function formatearPrecio(valor) {
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    minimumFractionDigits: 0,
+  }).format(valor);
+}
 
 function obtenerCantidad() {
   const valor = parseInt(inputCantidad.value, 10);
@@ -28,8 +73,8 @@ function obtenerTalleSeleccionado() {
 }
 
 function actualizarTotal() {
-  const total = precioUnitario * obtenerCantidad();
-  precioTotalEl.textContent = formatoPrecio.format(total);
+  const total = Number(contenedorProducto.dataset.precioUnitario) * obtenerCantidad();
+  precioTotalEl.textContent = formatearPrecio(total);
 }
 
 function cambiarCantidad(delta) {
@@ -56,10 +101,10 @@ btnConsultar.addEventListener("click", (evento) => {
   }
 
   const cantidad = obtenerCantidad();
-  const total = formatoPrecio.format(precioUnitario * cantidad);
+  const total = formatearPrecio(Number(contenedorProducto.dataset.precioUnitario) * cantidad);
 
   const mensaje =
-    `Hola! Quiero consultar por: ${nombreProducto}\n` +
+    `Hola! Quiero consultar por: ${producto.nombre}\n` +
     `Talle: ${talle}\n` +
     `Cantidad: ${cantidad}\n` +
     `Total aproximado: ${total}`;
