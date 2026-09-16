@@ -1,6 +1,6 @@
 
 
-/*  -VARIABLES-  */
+/*  -VARIABLES-  
 :root {
     --rosa: #c58b8b;
     --rosa-claro: #f6eeee;
@@ -22,10 +22,10 @@
 }
 
 
-/*
+
    RESET
- */
-* {
+ 
+ {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -88,9 +88,9 @@ ul {
 }
 
 
-/*
+
    CONTENIDO General
- */
+ 
 main {
     max-width: 1200px;
     margin: auto;
@@ -110,7 +110,7 @@ h2 {
 
 
 
-/*
+
 .hero {
     position:relative;
     min-height: 500px;
@@ -152,8 +152,8 @@ h2 {
     font-size: 18px;
     margin-bottom: 20px;
 }
-*/
-/* ===== fin del bloque HERO comentado ===== */
+
+  fin del bloque HERO comentado  
 
 
 .boton-primario,
@@ -173,7 +173,7 @@ h2 {
 
 
 
-/*
+
 .lista-categorias {
     display: flex;
     justify-content: center;
@@ -208,15 +208,15 @@ h2 {
     color: var(--bordo);
     font-weight: bold;
 }
-*/
-/* ===== fin del bloque CATEGORIAS comentado ===== */
+
+ ====
 
 
-/*
+
    PRODUCTOS - GRID
    (sigue activo: lo usan producto.html / nosotros.html.
     En index.html se reemplazo por .card de Bootstrap)
-*/
+
 .grilla-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -257,9 +257,9 @@ h2 {
 }
 
 
-/*
+
    TALLES
- */
+ 
 .talles {
     display: flex;
     gap: 7px;
@@ -274,18 +274,18 @@ h2 {
 }
 
 
-/*
+
    BOTÓN CONSULTAR
-= */
+
 .boton-consultar {
     width: 100%;
     text-align: center;
 }
 
 
-/*
+
    VER MÁS
- */
+ 
 .link-ver-mas {
     display: block;
     text-align: center;
@@ -300,7 +300,7 @@ h2 {
 
 
 
-/*
+
 .sobre-marca {
     text-align: center;
     background-color: var(--beige);
@@ -313,12 +313,12 @@ h2 {
     margin: auto;
     color: var(--gris);
 }
-*/
 
 
 
 
-/*
+
+
 .info-compra {
     background-color: var(--rosa-claro);
     padding: 35px;
@@ -340,12 +340,12 @@ h2 {
 .info-compra p {
     color: var(--gris);
 }
-*/
 
 
 
-/* FOOTER
-    */
+
+ FOOTER
+    
 .footer {
     background-color: var(--marron);
     color: var(--blanco);
@@ -374,7 +374,7 @@ h2 {
 }
 
 
-/*RESPONSIVE - TABLET */
+RESPONSIVE - TABLET 
 @media (max-width: 900px) {
 
     .grilla-productos {
@@ -386,17 +386,17 @@ h2 {
         gap: 15px;
     }
 
-    /*
+    
     .hero-texto {
         left: 5%;
     }
-    */
-}
+    
+ }
 
 
-/* 
+
    RESPONSIVE - CELULAR
- */
+ 
 @media (max-width: 600px) {
 
     main {
@@ -409,7 +409,7 @@ h2 {
         gap: 15px;
     }
 
-    /* 
+     
     
     .hero-imagen {
         min-height: 450px;
@@ -448,7 +448,7 @@ h2 {
     .sobre-marca {
         padding: 30px 20px;
     }
-    */
+    
 
     .grilla-productos {
         grid-template-columns: 1fr;
@@ -510,7 +510,7 @@ h2 {
 }
 
 
-/* ---- Miniaturas: Flexbox ---- */
+ ---- Miniaturas: Flexbox ---- 
 .galeria-miniaturas {
     display: flex;
     gap: var(--espacio-xs);
@@ -548,7 +548,7 @@ h2 {
 }
 
 
-/* ---- Cantidad: Flexbox ---- */
+ ---- Cantidad: Flexbox ---- 
 .selector-cantidad {
     display: flex;
     align-items: center;
@@ -576,9 +576,9 @@ h2 {
 }
 
 
-/* ========================================
+ ========================================
    RESPONSIVE - TABLET 
-======================================== */
+======================================== 
 @media (max-width: 900px) {
 
     .detalle-producto {
@@ -587,9 +587,9 @@ h2 {
 }
 
 
-/* ========================================
+ ========================================
    RESPONSIVE - CELULAR
-======================================== */
+======================================== 
 @media (max-width: 600px) {
 
     .info-producto h1 {
@@ -617,7 +617,7 @@ h2 {
 
 
 
-/*
+
 --cONTACTO--
 .intro-contacto {
     text-align: center;
