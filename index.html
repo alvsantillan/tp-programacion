@@ -151,9 +151,34 @@
           </a>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+      
+        <div class="row g-2 mb-4">
 
-          <div class="col">
+          <div class="col-md-7">
+            <label class="visually-hidden" for="buscadorProductos">Buscar producto por nombre</label>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="bi bi-search text-secondary"></i>
+              </span>
+              <input class="form-control border-start-0 ps-0" type="search" id="buscadorProductos"
+                placeholder="Buscar por nombre..." autocomplete="off">
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <label class="visually-hidden" for="ordenProductos">Ordenar productos</label>
+            <select class="form-select" id="ordenProductos">
+              <option value="destacado">Orden por defecto</option>
+              <option value="menor">Precio: de menor a mayor</option>
+              <option value="mayor">Precio: de mayor a menor</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="grillaDestacados">
+
+          <div class="col producto" data-nombre="Vestido floreado" data-precio="45000">
             <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="1">
               <a href="producto.html?id=1">
                 <img src="img/ui/claudete-vestido.jpg" class="card-img-top object-fit-cover" alt="Vestido floreado">
@@ -175,7 +200,7 @@
             </article>
           </div>
 
-          <div class="col">
+          <div class="col producto" data-nombre="Campera de jean" data-precio="62000">
             <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="2">
               <a href="producto.html?id=2">
                 <img src="img/ui/campera-jean-claudette.jpg" class="card-img-top object-fit-cover"
@@ -197,7 +222,7 @@
             </article>
           </div>
 
-          <div class="col">
+          <div class="col producto" data-nombre="Collar plateado" data-precio="12000">
             <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="3">
               <a href="producto.html?id=3">
                 <img src="img/ui/collarPlateado.jpg" class="card-img-top object-fit-cover" alt="Collar plateado">
@@ -217,7 +242,7 @@
             </article>
           </div>
 
-          <div class="col">
+          <div class="col producto" data-nombre="Pantalon de lino" data-precio="38000">
             <article class="card card-producto h-100 border-0 shadow-sm rounded-4 overflow-hidden" data-id="4">
               <a href="producto.html?id=4">
                 <img src="img/ui/pantalonLino-claudette.jpg" class="card-img-top object-fit-cover"
@@ -343,6 +368,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
