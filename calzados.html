@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Claudette | Calzado</title>
+  <meta name="description" content="Calzado comodo y versatil para complementar tu look - Claudette.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
+
+      <a class="navbar-brand p-0" href="index.html">
+        <img src="img/ui/logo.jpeg" alt="Claudette - Tienda de ropa" height="52" class="rounded-3">
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="https://wa.me/5493815551234" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">
+          <i class="bi bi-whatsapp me-1"></i>Escribinos
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <section class="container py-5">
+
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="catalogo.html">Catalogo</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbProducto">Calzado</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4 g-lg-5">
+
+        <div class="col-lg-6">
+          <img src="img/productos/calzado.jpg" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+            alt="Calzado" id="imagenProducto">
+        </div>
+
+        <div class="col-lg-6" data-categoria="calzado">
+          <h1 class="titulo fw-bold text-bordo mb-2" id="nombreProducto">Calzado</h1>
+          <p class="fs-3 fw-bold text-bordo mb-1" id="precioProducto">$0</p>
+          <p class="text-secondary small mb-4">En stock</p>
+
+          <fieldset class="mb-2">
+            <legend class="fw-semibold fs-6 mb-2">Talle</legend>
+            <div class="d-flex gap-2" id="grupoTalles">
+              <input type="radio" class="btn-check" name="talle" id="talleS" value="S" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleS">S</label>
+
+              <input type="radio" class="btn-check" name="talle" id="talleM" value="M" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleM">M</label>
+
+              <input type="radio" class="btn-check" name="talle" id="talleL" value="L" autocomplete="off">
+              <label class="btn btn-outline-primary" for="talleL">L</label>
+            </div>
+            <div class="form-text text-danger d-none" id="avisoTalle">
+              Elegi un talle antes de consultar.
+            </div>
+          </fieldset>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold d-block">Cantidad</label>
+            <div class="input-group" style="max-width: 160px">
+              <button class="btn btn-outline-secondary" type="button" id="btnMenos" aria-label="Restar cantidad">
+                <i class="bi bi-dash"></i>
+              </button>
+              <input type="number" id="cantidad" name="cantidad" value="1" min="1" class="form-control text-center">
+              <button class="btn btn-outline-secondary" type="button" id="btnMas" aria-label="Sumar cantidad">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <p class="fw-semibold mb-4">
+            Total: <span class="text-bordo" id="precioTotal">$0</span>
+          </p>
+
+          <a class="btn btn-primary btn-lg w-100 mb-4" id="btnConsultar" href="https://wa.me/5493815551234"
+            target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-1"></i>Consultar por WhatsApp
+          </a>
+
+          <div>
+            <h2 class="h5 fw-semibold mb-2">Descripcion</h2>
+            <p class="text-secondary mb-0" id="descripcionProducto"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-marron text-white pt-5 pb-4" id="contactos">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-md-5">
+          <h4 class="titulo h4 mb-2">Claudette</h4>
+          <p class="small text-white-50 mb-0">
+            Ropa y accesorios de mujer.<br>San Miguel de Tucuman, Argentina.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Navegacion</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="link-footer" href="index.html">Inicio</a></li>
+            <li><a class="link-footer" href="catalogo.html">Catalogo</a></li>
+            <li><a class="link-footer" href="nosotros.html">Nosotros</a></li>
+            <li><a class="link-footer" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h5 class="text-uppercase small fw-semibold text-white-50 mb-3">Seguinos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a class="link-footer" href="https://www.instagram.com/claudette.r.h" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="link-footer" href="https://wa.me/5493815551234" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="link-footer" href="mailto:hola@claudette.com" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="small text-white-50 mb-0">Claudette - Todos los derechos reservados</p>
+        <a class="link-footer small" href="admin/login.html">Administracion</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/producto-categoria.js"></script>
+
+</body>
+
+</html>
