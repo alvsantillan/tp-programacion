@@ -77,7 +77,8 @@
 
             <h2 class="titulo h3 fw-bold text-bordo mb-4">Envianos tu consulta</h2>
 
-            <form action="#" method="post">
+            <!-- novalidate apaga los carteles del navegador: los mensajes los pone js/contacto.js -->
+            <form action="#" method="post" id="formContacto" novalidate>
 
               <div class="row g-3">
 
@@ -85,41 +86,46 @@
                   <label class="form-label fw-semibold" for="nombre">Nombre y apellido</label>
                   <input class="form-control form-control-lg" type="text" id="nombre" name="nombre"
                     placeholder="Tu nombre" required>
+                  <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6">
                   <label class="form-label fw-semibold" for="email">Email</label>
                   <input class="form-control form-control-lg" type="email" id="email" name="email"
                     placeholder="tunombre@mail.com" required>
+                  <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6">
                   <label class="form-label fw-semibold" for="telefono">Telefono / WhatsApp</label>
                   <input class="form-control form-control-lg" type="tel" id="telefono" name="telefono"
                     placeholder="381 555 1234">
+                  <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">
                   <label class="form-label fw-semibold" for="motivo">Motivo de la consulta</label>
                   <select class="form-select form-select-lg" id="motivo" name="motivo" required>
                     <option value="">Elegi una opcion</option>
-                    <option value="producto">Consulta por un producto</option>
-                    <option value="talles">Talles y disponibilidad</option>
-                    <option value="envios">Envios</option>
-                    <option value="cambios">Cambios y devoluciones</option>
-                    <option value="otro">Otro</option>
+                    <option value="Consulta por un producto">Consulta por un producto</option>
+                    <option value="Talles y disponibilidad">Talles y disponibilidad</option>
+                    <option value="Envios">Envios</option>
+                    <option value="Cambios y devoluciones">Cambios y devoluciones</option>
+                    <option value="Otro">Otro</option>
                   </select>
+                  <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">
                   <label class="form-label fw-semibold" for="mensaje">Mensaje</label>
                   <textarea class="form-control" id="mensaje" name="mensaje" rows="6"
                     placeholder="Contanos en que podemos ayudarte" required></textarea>
+                  <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12 d-grid d-sm-block">
                   <button class="btn btn-primary btn-lg px-4" type="submit">
-                    <i class="bi bi-send me-1"></i>Enviar consulta
+                    <i class="bi bi-whatsapp me-1"></i>Enviar consulta por WhatsApp
                   </button>
                 </div>
 
@@ -246,6 +252,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/contacto.js"></script>
 
 </body>
 
